@@ -1,0 +1,20 @@
+.dr-menu {
+  width: 100%;
+
+  .menu-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.082);
+  }
+  .menu-btn:focus,
+  .menu-btn:active {
+    outline: none;
+    border: 1px solid #4b5eee77;
+  }
+
+  .menu-items {
+    width: 100%;
+  }
+}

@@ -1,0 +1,119 @@
+.tender {
+  background: white;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.082);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .tender__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    .tender__title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .tender__image {
+      font-size: 4.5rem;
+      color: rgb(158, 158, 158);
+      margin-bottom: 0.5rem;
+    }
+
+    .tender__feedbacks {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1.2rem;
+      font-size: 1.2rem;
+      width: 4rem;
+
+      .green {
+        color: darkgreen;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+
+      // span {
+      //   margin-right: 0.3rem;
+      //   font-size: 1.2rem;
+      // }
+    }
+
+    .tender__header {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      color: rgb(17, 76, 202);
+      margin-bottom: 1.5rem;
+
+      .price__icon {
+        margin-right: 0.3rem;
+      }
+    }
+
+    .tender__details-btn {
+      color: white;
+      background: #3343be;
+      text-align: center;
+      width: 10rem;
+      border-radius: 0.4rem;
+      padding: 0.3rem 1rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+
+      // .tender__details-btn :focus,
+      // .tender__details-btn :active {
+      //   border: none;
+      //   outline: 20px solid blue;
+      // }
+    }
+  }
+
+  .tender__footer {
+    background: #3d4ff7a6;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    align-items: center;
+
+    .footer__icon {
+      color: rgb(39, 57, 223);
+      margin-right: 0.5rem;
+    }
+    .footer__text {
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.tender:hover {
+  box-shadow: 1px 2px 10px 3px rgba(0, 0, 0, 0.199);
+}
