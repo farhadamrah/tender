@@ -7,6 +7,8 @@ import '../Footer/Footer.scss';
 
 import ServiceOrders from './MainPages/ServiceOrders/ServiceOrders';
 import Login from './MainPages/Sign/Login/Login';
+import Register from './MainPages/Sign/Register/Register';
+import Rules from './MainPages/Sign/Register/RegisterRules/Rules';
 
 const Main = () => {
   return (
@@ -15,6 +17,8 @@ const Main = () => {
         <section className="main-container">
           <Switch>
             <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/rules" component={Rules} />
             <Route path="/" component={ServiceOrders} />
           </Switch>
         </section>

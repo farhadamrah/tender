@@ -1,11 +1,18 @@
 .login-container {
   margin-top: 4rem;
-  border-radius: 0.6rem;
+  border-radius: 0.5rem;
   box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.158);
 
   .form__title {
     font-size: 2rem;
     font-weight: 800;
-    color: rgb(9, 11, 109);
+    color: #251ca3;
+  }
+
+  .horizontal-line {
+    width: 80%;
+    height: 0.09rem;
+    background: #d3d3d39c;
+    margin-bottom: 1.5rem;
   }
 }

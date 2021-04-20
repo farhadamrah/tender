@@ -1,0 +1,60 @@
+.form {
+  background: white;
+  margin-top: 8rem;
+  padding: 1rem;
+  padding-top: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.158);
+
+  .ant-form-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ant-btn-primary {
+    background-color: #5145fc;
+    border-color: #483bf7;
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+  }
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus {
+    background-color: #2e23ce;
+    border-color: #2e23ce;
+  }
+
+  .ant-input-affix-wrapper:hover {
+    border-color: #5850eb !important;
+  }
+  .ant-input-affix-wrapper:active {
+    box-shadow: 0 0 2px rgb(89, 82, 235);
+    // box-shadow: 0 0 2px #413bad !important;
+    border-color: rgb(89, 82, 235) !important;
+  }
+
+  .ant-input-affix-wrapper {
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.8rem;
+    // background-color: red;
+  }
+
+  #normal_login_phone {
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .ant-input-group-addon {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+  }
+}

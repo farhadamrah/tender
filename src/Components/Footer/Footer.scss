@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  position: relative;
-  // width: 100vw;
+  width: 100%;
+  margin-top: auto;
 
   .footer__nav {
     display: flex;
@@ -14,9 +14,10 @@
     align-items: center;
 
     .footer__title {
-      margin-bottom: 1.2rem;
-      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
       font-weight: bold;
+      color: white;
     }
 
     .footer__list {

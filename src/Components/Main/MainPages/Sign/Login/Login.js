@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Login.scss';
 import { LockClosedIcon } from '@heroicons/react/solid';
 
 const Login = () => {
   return (
     <>
-      <div className="flex items-center justify-center bg-gray-50  pb-8 px-4 sm:px-6 lg:px-8 mt-28 login-container">
+      <div className="flex items-center justify-center bg-gray-50  pb-8 px-4 sm:px-6 lg:px-8 mt-24 login-container">
         <div className="max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-5 text-center text-3xl font-extrabold text-gray-900 form__title">
@@ -34,7 +35,7 @@ const Login = () => {
               </div>
               <div>
                 <label htmlFor="password" className="form__label font-medium">
-                  Password
+                  Şifrə
                 </label>
                 <input
                   id="password"
@@ -60,7 +61,7 @@ const Login = () => {
                   htmlFor="remember_me"
                   className="ml-2 block text-sm text-gray-900"
                 >
-                  Remember me
+                  Yadda saxla
                 </label>
               </div>
 
@@ -69,15 +70,15 @@ const Login = () => {
                   href="#"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
-                  Forgot your password?
+                  Şifrəni unutdun?
                 </a>
               </div>
             </div>
 
-            <div>
+            <div className="flex flex-col items-center">
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-6"
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                   <LockClosedIcon
@@ -85,8 +86,23 @@ const Login = () => {
                     aria-hidden="true"
                   />
                 </span>
-                Sign in
+                Daxil ol
               </button>
+
+              <div className="horizontal-line" />
+
+              <p className="font-normal text-indigo-600 hover:text-indigo-500 mb-2">
+                Hesabınız yoxdur?
+              </p>
+
+              <Link to="/register">
+                <button
+                  type="submit"
+                  className="group relative w-48 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Qeydiyyat
+                </button>
+              </Link>
             </div>
           </form>
         </div>
