@@ -1,12 +1,99 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss';
-import { LockClosedIcon } from '@heroicons/react/solid';
+
+import { Form, Input, Button, Checkbox } from 'antd';
+import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
+import FormItem from 'antd/lib/form/FormItem';
 
 const Login = () => {
+  const onFinish = (values) => {
+    console.log('Received values of form: ', values);
+  };
+
   return (
     <>
-      <div className="flex items-center justify-center bg-gray-50  pb-8 px-4 sm:px-6 lg:px-8 mt-24 login-container">
+      <div className="login-container">
+        <h1 className="login-title">Welcome to Tender World</h1>
+        <Form
+          name="normal_login"
+          className="login-form"
+          initialValues={{
+            remember: true,
+          }}
+          onFinish={onFinish}
+        >
+          <Form.Item
+            label="E-poçtunuz"
+            name="email"
+            rules={[
+              {
+                required: true,
+                message: 'Zəhmət olmazsa e-poçtunuzu daxil edin!',
+              },
+            ]}
+          >
+            <Input
+              prefix={<MailOutlined className="site-form-item-icon" />}
+              placeholder="E-poçtunuz"
+            />
+          </Form.Item>
+
+          <Form.Item
+            label="Şifrə"
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: 'Zəhmət olmazsa şifrənizi daxil edin!',
+              },
+            ]}
+          >
+            <Input.Password
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              type="password"
+              placeholder="Şifrə"
+            />
+          </Form.Item>
+
+          <div className="login__check">
+            <Form.Item>
+              <Form.Item name="remember" valuePropName="" noStyle>
+                <Checkbox>Yadda saxla</Checkbox>
+              </Form.Item>
+            </Form.Item>
+
+            <Form.Item>
+              <Link to="#">Şifrəni unutdun?</Link>
+            </Form.Item>
+          </div>
+
+          <div className="login__buttons">
+            <Form.Item>
+              <Button type="primary" className="a login-form-button">
+                Daxil ol
+              </Button>
+            </Form.Item>
+            <div className="horizontal-line" />
+            <p>Hesabınız yoxdur?</p>
+            <Form.Item>
+              <Link to="/register">
+                <Button type="primary" className="login-form-button">
+                  Qeydiyyat
+                </Button>
+              </Link>
+            </Form.Item>
+          </div>
+        </Form>
+      </div>
+    </>
+  );
+};
+
+export default Login;
+
+/**
+  <div className="flex items-center justify-center bg-gray-50  pb-8 px-4 sm:px-6 lg:px-8 mt-24 login-container">
         <div className="max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-5 text-center text-3xl font-extrabold text-gray-900 form__title">
@@ -107,8 +194,4 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </>
-  );
-};
-
-export default Login;
+ */

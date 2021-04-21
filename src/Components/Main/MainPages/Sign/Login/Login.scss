@@ -1,18 +1,107 @@
 .login-container {
-  margin-top: 4rem;
+  background: #f9fafb;
+  margin-top: 6rem;
+  padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.158);
 
-  .form__title {
+  .login-title {
     font-size: 2rem;
     font-weight: 800;
-    color: #251ca3;
+    color: #3629ec;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 2.4rem;
   }
 
-  .horizontal-line {
-    width: 80%;
-    height: 0.09rem;
-    background: #d3d3d39c;
-    margin-bottom: 1.5rem;
+  .ant-input {
+    background-color: white;
+    margin-left: 0.3rem;
+  }
+
+  .ant-input-affix-wrapper:hover,
+  .ant-input:hover {
+    border-color: #5850eb !important;
+  }
+
+  .ant-input-affix-wrapper {
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    border-color: #d2d6db;
+  }
+
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused,
+  .ant-input:focus {
+    border-color: #1b0ddf;
+    box-shadow: 0 0 0 2px #150ab644;
+  }
+
+  .ant-form-item-label > label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #303030;
+  }
+  .ant-form-item .ant-form-item-label {
+    padding: 0;
+  }
+  .ant-form-item-required::before {
+    content: none !important;
+  }
+
+  .login__check {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .ant-form-item {
+      width: auto !important;
+      color: #372bdb;
+    }
+  }
+
+  .login__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .ant-btn-primary {
+      background-color: #5247f3;
+      border-color: #3f32f5;
+      border-radius: 0.4rem;
+      width: 100%;
+      padding: 1rem;
+      padding-bottom: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 0.06rem;
+    }
+    .ant-btn-primary:hover,
+    .ant-btn-primary:focus {
+      background-color: #2e23ce;
+      border-color: #2e23ce;
+    }
+
+    .ant-row:first-child {
+      width: 100%;
+    }
+    .ant-row:last-child {
+      width: 60%;
+    }
+
+    .horizontal-line {
+      width: 80%;
+      height: 0.08rem;
+      background: #d3d3d377;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #372bdb;
+      margin-bottom: 0.5rem;
+    }
   }
 }
