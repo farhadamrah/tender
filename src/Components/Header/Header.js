@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faHome,
   faSignInAlt,
   faUserAlt,
   faGlobe,
@@ -27,8 +28,14 @@ const Header = () => {
         <div className="toggle-button" onClick={handleClick}>
           <FontAwesomeIcon icon={faBars} />
         </div>
+
         <nav className="main-navbar">
           <ul className="main-navbar__items">
+            <li className="main-navbar__item">
+              <Link to="/">
+                <FontAwesomeIcon icon={faHome} />
+              </Link>
+            </li>
             <li className="main-navbar__item">
               <Link to="/login">
                 <FontAwesomeIcon icon={faSignInAlt} />
