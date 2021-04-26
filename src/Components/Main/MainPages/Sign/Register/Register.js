@@ -7,44 +7,51 @@ import { Form, Input, Button, Checkbox, Radio } from 'antd';
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
 
 const Register = () => {
+  const value1 = 'Adınız';
+  const value2 = 'Şirkətinizin adı';
+
   const [value, setValue] = useState();
-  const [name, setName] = useState('');
-  const [button, setButton] = useState(false);
+  const [name, setName] = useState(value1);
+
+  // const [formData, setFormData] = useState({
+  //   formName: 'test',
+  //   email: '',
+  //   number: '',
+  // });
+  // const { formName, email, number } = formData;
 
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
   };
 
   const onChange = (e) => {
-    console.log(e.target.value);
     setValue(e.target.value);
+    console.log(e.target.value);
   };
 
-  const onChangeBtn = (e) => {
-    console.log(e.target.value);
-    setButton(e.target.value);
-    setButton(!button);
-    console.log(button);
+  const onChangeName = (e) => {
+    setName(e.target.value);
   };
+  console.log(name);
 
   return (
     <>
       <div className="form">
         <Radio.Group
-          onChange={onChangeBtn}
-          value={value}
+          onChange={onChangeName}
+          // value={name}
           optionType="button"
           className="change-buttons"
         >
           <Radio
-            value={'şəxs'}
-            className={button ? 'radio-btn selected-btn' : 'radio-btn'}
+            value={value1}
+            className={name === value1 ? 'radio-btn selected-btn' : 'radio-btn'}
           >
             Fiziki şəxs
           </Radio>
           <Radio
-            value={'şirkət'}
-            className={!button ? 'radio-btn selected-btn' : 'radio-btn'}
+            value={value2}
+            className={name !== value1 ? 'radio-btn selected-btn' : 'radio-btn'}
           >
             Şirkət
           </Radio>
@@ -75,18 +82,25 @@ const Register = () => {
           onFinish={onFinish}
         >
           <Form.Item
-            label={button ? 'Adınız' : 'Şirkətinizin adı'}
+            label={name}
             name="username"
             rules={[
               {
                 required: true,
-                message: 'Zəhmət olmazsa adınızı daxil edin!',
+                message:
+                  name === value1
+                    ? 'Zəhmət olmazsa adınızı daxil edin'
+                    : 'Zəhmət olmazsa şirkətinizin adını daxil edin',
               },
             ]}
           >
             <Input
               prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder={button ? 'Adınız' : 'Şirkətinizin adı'}
+              placeholder={
+                name === value1
+                  ? 'Adınızı daxil edin'
+                  : 'Şirkətinizin adını daxil edin'
+              }
             />
           </Form.Item>
 
@@ -102,7 +116,7 @@ const Register = () => {
           >
             <Input
               prefix={<MailOutlined className="site-form-item-icon" />}
-              placeholder="E-poçtunuz"
+              placeholder="example@gmail.com"
             />
           </Form.Item>
 

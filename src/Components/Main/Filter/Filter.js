@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import DropDown from './DropDown/DropDown';
-
-import './Filter.scss';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Filter.scss';
 
 const Filter = () => {
   const [clickFilter, setClickFilter] = useState(false);

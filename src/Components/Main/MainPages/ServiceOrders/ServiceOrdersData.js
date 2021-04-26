@@ -27,6 +27,48 @@ const TenderData = [
     deadLine: '11.05.2021',
     order: 0,
   },
+  {
+    title: 'Buta Grup',
+    // image: '',
+    header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
+    feedbacks: {
+      green: 0,
+      red: 0,
+      blue: 0,
+    },
+    price: 0,
+    addedDate: 2,
+    deadLine: '11.05.2021',
+    order: 0,
+  },
+  {
+    title: 'Buta Grup',
+    // image: '',
+    header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
+    feedbacks: {
+      green: 0,
+      red: 0,
+      blue: 0,
+    },
+    price: 0,
+    addedDate: 2,
+    deadLine: '11.05.2021',
+    order: 0,
+  },
+  {
+    title: 'Buta Grup',
+    // image: '',
+    header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
+    feedbacks: {
+      green: 0,
+      red: 0,
+      blue: 0,
+    },
+    price: 0,
+    addedDate: 2,
+    deadLine: '11.05.2021',
+    order: 0,
+  },
 ];
 
 export default TenderData;

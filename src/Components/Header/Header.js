@@ -48,13 +48,18 @@ const Header = () => {
         </nav>
       </header>
 
+      <div
+        className={collapsed ? 'backdrop open' : 'backdrop'}
+        onClick={handleClose}
+      />
+
       <nav className={collapsed ? 'mobile-nav active' : 'mobile-nav'}>
         <ul className="mobile-nav__items">
           <li className="mobile-nav__item" onClick={handleClick}>
             <Link>Sifariş Yerləşdir</Link>
           </li>
           <li className="mobile-nav__item" onClick={handleClick}>
-            <Link to="/">Xidmət Sifarişləri</Link>
+            <Link to="/service-orders">Xidmət Sifarişləri</Link>
           </li>
           <li className="mobile-nav__item" onClick={handleClick}>
             <Link>Məhsul Sifarişləri</Link>

@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './Login.scss';
 
 import { Form, Input, Button, Checkbox } from 'antd';
-import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
-import FormItem from 'antd/lib/form/FormItem';
+import { LockOutlined, MailOutlined } from '@ant-design/icons';
 
 const Login = () => {
   const onFinish = (values) => {
@@ -64,13 +63,13 @@ const Login = () => {
             </Form.Item>
 
             <Form.Item>
-              <Link to="#">Şifrəni unutdun?</Link>
+              <Link to="/find-password">Şifrəni unutdun?</Link>
             </Form.Item>
           </div>
 
           <div className="login__buttons">
             <Form.Item>
-              <Button type="primary" className="a login-form-button">
+              <Button type="primary" className="login-form-button">
                 Daxil ol
               </Button>
             </Form.Item>

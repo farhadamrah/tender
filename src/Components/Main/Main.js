@@ -1,14 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Footer from '../Footer/Footer';
-
-import './Main.scss';
-import '../Footer/Footer.scss';
-
 import ServiceOrders from './MainPages/ServiceOrders/ServiceOrders';
 import Login from './MainPages/Sign/Login/Login';
 import Register from './MainPages/Sign/Register/Register';
 import Rules from './MainPages/Sign/Register/RegisterRules/Rules';
+import FindPassword from './MainPages/Sign/Login/FindPassword/FindPassword';
+import HomePage from './MainPages/HomePage/HomePage';
+import './Main.scss';
 
 const Main = () => {
   return (
@@ -17,9 +15,11 @@ const Main = () => {
         <section className="main-container">
           <Switch>
             <Route path="/login" component={Login} />
+            <Route path="/find-password" component={FindPassword} />
             <Route path="/register" component={Register} />
             <Route path="/rules" component={Rules} />
-            <Route path="/" component={ServiceOrders} />
+            <Route path="/service-orders" component={ServiceOrders} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </section>
       </main>
