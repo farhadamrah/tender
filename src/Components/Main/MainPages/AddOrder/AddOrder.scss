@@ -1,0 +1,128 @@
+.container {
+  .container__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3d32d3;
+    text-shadow: 1px 1px 2px #130a8a;
+    margin-bottom: 1.5rem;
+  }
+
+  .ant-form {
+    width: 100%;
+
+    .change-buttons {
+      margin-bottom: 1.5rem;
+      display: flex;
+
+      // .ant-radio-button-wrapper {
+      .radio-btn {
+        width: 7rem;
+        height: 2.3rem;
+        line-height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        letter-spacing: 0.05rem;
+        font-weight: 500;
+        background-color: rgb(96, 88, 236);
+        color: white;
+        border-radius: 0.5rem;
+        transform: scale(1.1);
+        border: 1px solid rgba(27, 37, 177, 0.74);
+
+        .ant-radio {
+          display: none;
+        }
+      }
+
+      .selected-btn {
+        background-color: rgb(70, 57, 243);
+        transform: scale(1.01);
+        border: 3px solid rgba(34, 20, 155, 0.541);
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+      }
+    }
+
+    .change-btns__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #545c6a;
+      margin-bottom: 0.5rem;
+    }
+
+    .ant-form-item {
+      width: 100%;
+
+      .ant-input {
+        margin-bottom: 0;
+      }
+
+      .ant-form-item-label > label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #545c6a;
+      }
+
+      .ant-form-item-label {
+        padding: 0;
+      }
+      .ant-form-item-required::before {
+        content: none !important;
+      }
+
+      .ant-form-item-control-input-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .ant-select-selector {
+        border-radius: 0.5rem;
+      }
+
+      .ant-btn-primary {
+        background-color: #5145fc;
+        border-color: #483bf7;
+        border-radius: 0.4rem;
+        width: 100%;
+        padding: 1rem;
+        padding-bottom: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1rem;
+        letter-spacing: 0.06rem;
+        box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.521);
+      }
+      .ant-btn-primary:hover,
+      .ant-btn-primary:focus {
+        background-color: #2e23ce;
+        border-color: #2e23ce;
+      }
+
+      .ant-input-affix-wrapper:hover,
+      .ant-input:hover {
+        border-color: #5850eb !important;
+      }
+
+      .ant-input-affix-wrapper {
+        border-radius: 0.4rem;
+        // padding: 0.5rem 0.8rem;
+        border-color: #d2d6db;
+      }
+
+      .ant-input-affix-wrapper:focus,
+      .ant-input-affix-wrapper-focused,
+      .ant-input:focus {
+        border-color: #1b0ddf;
+        box-shadow: 0 0 0 2px #150ab644;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

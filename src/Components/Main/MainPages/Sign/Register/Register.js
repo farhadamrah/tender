@@ -36,12 +36,12 @@ const Register = () => {
 
   return (
     <>
-      <div className="form">
+      <div className='form'>
         <Radio.Group
           onChange={onChangeName}
           // value={name}
-          optionType="button"
-          className="change-buttons"
+          optionType='button'
+          className='change-buttons'
         >
           <Radio
             value={value1}
@@ -60,22 +60,22 @@ const Register = () => {
         <Radio.Group
           onChange={onChange}
           value={value}
-          className="radio-container"
+          className='radio-container'
         >
-          <Radio value={1} className="radio">
+          <Radio value={1} className='radio'>
             İcraçı (Xidmət və ya məhsul təklif edən şəxs və ya şirkət)
           </Radio>
-          <Radio value={2} className="radio">
+          <Radio value={2} className='radio'>
             Sifarişçi (Xidmət və ya məhsul axtaran şəxs və ya şirkət)
           </Radio>
-          <Radio value={3} className="radio">
+          <Radio value={3} className='radio'>
             Satıcı (məhsul satan şəxs)
           </Radio>
         </Radio.Group>
 
         <Form
-          name="normal_login"
-          className="login-form"
+          name='normal_login'
+          className='login-form'
           initialValues={{
             remember: true,
           }}
@@ -83,7 +83,7 @@ const Register = () => {
         >
           <Form.Item
             label={name}
-            name="username"
+            name='username'
             rules={[
               {
                 required: true,
@@ -95,7 +95,7 @@ const Register = () => {
             ]}
           >
             <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
+              prefix={<UserOutlined className='site-form-item-icon' />}
               placeholder={
                 name === value1
                   ? 'Adınızı daxil edin'
@@ -105,8 +105,8 @@ const Register = () => {
           </Form.Item>
 
           <Form.Item
-            label="E-poçtunuz"
-            name="email"
+            label='E-poçtunuz'
+            name='email'
             rules={[
               {
                 required: true,
@@ -115,14 +115,14 @@ const Register = () => {
             ]}
           >
             <Input
-              prefix={<MailOutlined className="site-form-item-icon" />}
-              placeholder="example@gmail.com"
+              prefix={<MailOutlined className='site-form-item-icon' />}
+              placeholder='example@gmail.com'
             />
           </Form.Item>
 
           <Form.Item
-            label="Telefon nömrəniz"
-            name="phone"
+            label='Telefon nömrəniz'
+            name='phone'
             rules={[
               {
                 required: true,
@@ -131,14 +131,14 @@ const Register = () => {
             ]}
           >
             <Input
-              addonBefore="+994"
-              placeholder="Telefon nömrənizi daxil edin"
+              addonBefore='+994'
+              placeholder='Telefon nömrənizi daxil edin'
             />
           </Form.Item>
 
           <Form.Item
-            label="Şifrə"
-            name="password1"
+            label='Şifrə'
+            name='password1'
             rules={[
               {
                 required: true,
@@ -147,14 +147,14 @@ const Register = () => {
             ]}
           >
             <Input.Password
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              type="password"
-              placeholder="Şifrə"
+              prefix={<LockOutlined className='site-form-item-icon' />}
+              type='password'
+              placeholder='Şifrə'
             />
           </Form.Item>
           <Form.Item
-            label="Şifrə"
-            name="password2"
+            label='Şifrə'
+            name='password2'
             rules={[
               {
                 required: true,
@@ -163,25 +163,25 @@ const Register = () => {
             ]}
           >
             <Input.Password
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              type="password"
-              placeholder="Təkrar şifrə"
+              prefix={<LockOutlined className='site-form-item-icon' />}
+              type='password'
+              placeholder='Təkrar şifrə'
             />
           </Form.Item>
 
           <Form.Item>
-            <Form.Item name="remember" valuePropName="" noStyle>
+            <Form.Item name='remember' valuePropName='' noStyle>
               <Checkbox>
-                <Link to="/rules">Qaydalarla</Link> tanış oldum və qəbul edirəm
+                <Link to='/rules'>Qaydalarla</Link> tanış oldum və qəbul edirəm
               </Checkbox>
             </Form.Item>
           </Form.Item>
 
           <Form.Item>
             <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
+              type='primary'
+              htmlType='submit'
+              className='login-form-button'
             >
               Qeydiyyat
             </Button>

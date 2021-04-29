@@ -5,6 +5,7 @@ import Login from './MainPages/Sign/Login/Login';
 import Register from './MainPages/Sign/Register/Register';
 import Rules from './MainPages/Sign/Register/RegisterRules/Rules';
 import FindPassword from './MainPages/Sign/Login/FindPassword/FindPassword';
+import AddOrder from './MainPages/AddOrder/AddOrder';
 import HomePage from './MainPages/HomePage/HomePage';
 import './Main.scss';
 
@@ -19,6 +20,7 @@ const Main = () => {
             <Route path="/register" component={Register} />
             <Route path="/rules" component={Rules} />
             <Route path="/service-orders" component={ServiceOrders} />
+            <Route path="/add-order" component={AddOrder} />
             <Route path="/" component={HomePage} />
           </Switch>
         </section>

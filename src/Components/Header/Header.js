@@ -63,7 +63,7 @@ const Header = () => {
       <nav className={collapsed ? 'mobile-nav active' : 'mobile-nav'}>
         <ul className="mobile-nav__items">
           <li className="mobile-nav__item" onClick={handleClick}>
-            <Link>Sifariş Yerləşdir</Link>
+            <Link to="/add-order">Sifariş Yerləşdir</Link>
           </li>
           <li className="mobile-nav__item" onClick={handleClick}>
             <Link to="/service-orders">Xidmət Sifarişləri</Link>
