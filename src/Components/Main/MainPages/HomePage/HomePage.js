@@ -9,7 +9,7 @@ const HomePage = () => {
       <HomeCarousel />
       <div className="home-container">
         <div className="home-container__list">
-          <h1 className="list-title">Ən son tenderlər</h1>
+          <h1 className="list-title">Ən son tenderlərrr</h1>
           <ScrollableList />
         </div>
 
