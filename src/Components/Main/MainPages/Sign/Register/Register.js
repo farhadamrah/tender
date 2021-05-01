@@ -17,7 +17,6 @@ const Register = () => {
   const value2 = 'Şirkətinizin adı';
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-  const [value, setValue] = useState(0);
   const [name, setName] = useState(value1);
   const [checked, setChecked] = useState(false);
   const [register, setRegister] = useState('Qeydiyyat');
@@ -46,7 +45,7 @@ const Register = () => {
     };
   }, [history]);
 
-  const onFinish = (values) => {
+  const onFinish = () => {
     if (checked) {
       if (
         !user.name &&
@@ -121,10 +120,6 @@ const Register = () => {
     }
   };
 
-  const onChange = (e) => {
-    setValue(e.target.value);
-  };
-
   const onChangeName = (e) => {
     setName(e.target.value);
     if (e.target.value === 'Adınız') {
@@ -158,22 +153,6 @@ const Register = () => {
             className={name !== value1 ? 'radio-btn selected-btn' : 'radio-btn'}
           >
             Şirkət
-          </Radio>
-        </Radio.Group>
-
-        <Radio.Group
-          onChange={onChange}
-          value={value}
-          className='radio-container'
-        >
-          <Radio value={1} className='radio'>
-            İcraçı (Xidmət və ya məhsul təklif edən şəxs və ya şirkət)
-          </Radio>
-          <Radio value={2} className='radio'>
-            Sifarişçi (Xidmət və ya məhsul axtaran şəxs və ya şirkət)
-          </Radio>
-          <Radio value={3} className='radio'>
-            Satıcı (məhsul satan şəxs)
           </Radio>
         </Radio.Group>
 

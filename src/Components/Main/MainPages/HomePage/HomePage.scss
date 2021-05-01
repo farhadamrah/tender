@@ -19,7 +19,7 @@
       position: absolute;
       top: -5.5%;
       left: 10%;
-      background-color: #3e32f1;
+      background: linear-gradient(to bottom, #2618ee, #2113eba9, #1f1cdb81);
       z-index: 1;
       text-transform: uppercase;
     }
@@ -29,27 +29,29 @@
       padding: 1.5rem 1rem;
       padding-bottom: 0.5rem;
       overflow: auto;
-      border: 1px solid #3e32f1;
+      border-top: 1px solid #ececec;
       border-radius: 0.5rem;
+      box-shadow: 0 0 1px 0 rgba(10, 22, 70, 0.06),
+        0 16px 16px -1px rgba(10, 22, 70, 0.1);
 
       .fa-user-circle {
         font-size: 2.5rem;
-        color: #b6b6b6;
+        color: #d3d3d3;
       }
     }
   }
   .home-container__list:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 }
 
 .ant-carousel {
   max-width: 100%;
   margin-top: 5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .ant-carousel .slick-slide img {
   width: 100%;
-  height: 100%;
+  height: 10rem;
 }
