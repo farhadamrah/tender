@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Register.scss';
 import 'antd/dist/antd.css';
 import { auth, db } from '../../../../../firebase';
-import { Form, Input, Button, Checkbox, Radio } from 'antd';
-import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
+import { Form, Input, Button, Checkbox, Radio, Spin } from 'antd';
+import {
+  UserOutlined,
+  LockOutlined,
+  MailOutlined,
+  LoadingOutlined,
+} from '@ant-design/icons';
 
 const Register = () => {
+  const history = useHistory();
   const value1 = 'Adınız';
   const value2 = 'Şirkətinizin adı';
+  const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const [name, setName] = useState(value1);
   const [checked, setChecked] = useState(false);
-
+  const [register, setRegister] = useState('Qeydiyyat');
   const [user, setUser] = useState({
-    status: name === 'Adınız' ? 0 : 1,
+    status: 0,
     name: '',
     email: '',
     phone: '',
@@ -32,7 +39,13 @@ const Register = () => {
 
   const onFinish = (values) => {
     if (checked) {
-      if (!user.name && !user.email && !user.password1 && !user.password2) {
+      if (
+        !user.name &&
+        !user.email &&
+        !user.phone &&
+        !user.password1 &&
+        !user.password2
+      ) {
         alert('Bütün xanalar daxil edilməyib');
         return;
       }
@@ -47,8 +60,10 @@ const Register = () => {
         user.email &&
         user.password1 &&
         user.password2 &&
+        user.phone &&
         user.password1 === user.password2
       ) {
+        setRegister(<Spin indicator={antIcon} />);
         auth
           .createUserWithEmailAndPassword(user.email, user.password1)
           .then((authUser) => {
@@ -65,12 +80,16 @@ const Register = () => {
                     name: authUser.user.providerData[0].displayName,
                     email: authUser.user.providerData[0].email,
                     photoURL: authUser.user.providerData[0].photoURL || null,
-                    phoneNumber:
-                      authUser.user.providerData[0].phoneNumber || null,
+                    phoneNumber: '+994' + user.phone,
                     providerId: authUser.user.providerData[0].providerId,
                   });
+                setRegister('Qeydiyyat');
+                history.push('/');
               })
-              .catch((err) => alert(err.message));
+              .catch((err) => {
+                alert(err.message);
+                setRegister('Qeydiyyat');
+              });
           })
           .catch((err) => {
             if (
@@ -85,23 +104,26 @@ const Register = () => {
             } else {
               alert(err.message);
             }
+            setRegister('Qeydiyyat');
           });
       }
     } else {
       alert('Check the checkbox below');
     }
-    console.log('Received values of form: ', values);
   };
 
   const onChange = (e) => {
     setValue(e.target.value);
-    console.log(e.target.value);
   };
 
   const onChangeName = (e) => {
     setName(e.target.value);
+    if (e.target.value === 'Adınız') {
+      setUser((prev) => ({ ...prev, status: 0 }));
+    } else {
+      setUser((prev) => ({ ...prev, status: 1 }));
+    }
   };
-  console.log(name);
 
   const onChangeCheckBox = (e) => {
     setChecked(e.target.checked);
@@ -174,8 +196,9 @@ const Register = () => {
                   ? 'Adınızı daxil edin'
                   : 'Şirkətinizin adını daxil edin'
               }
-              value={user.name}
-              onChange={(text) => setUser((prev) => ({ ...prev, name: text }))}
+              onChange={(text) =>
+                setUser((prev) => ({ ...prev, name: text.target.value }))
+              }
             />
           </Form.Item>
 
@@ -192,8 +215,9 @@ const Register = () => {
             <Input
               prefix={<MailOutlined className='site-form-item-icon' />}
               placeholder='example@gmail.com'
-              value={user.email}
-              onChange={(text) => setUser((prev) => ({ ...prev, email: text }))}
+              onChange={(text) =>
+                setUser((prev) => ({ ...prev, email: text.target.value }))
+              }
             />
           </Form.Item>
 
@@ -210,8 +234,9 @@ const Register = () => {
             <Input
               addonBefore='+994'
               placeholder='Telefon nömrənizi daxil edin'
-              value={user.phone}
-              onChange={(text) => setUser((prev) => ({ ...prev, phone: text }))}
+              onChange={(text) =>
+                setUser((prev) => ({ ...prev, phone: text.target.value }))
+              }
             />
           </Form.Item>
 
@@ -229,9 +254,8 @@ const Register = () => {
               prefix={<LockOutlined className='site-form-item-icon' />}
               type='password'
               placeholder='Şifrə'
-              value={user.password1}
               onChange={(text) =>
-                setUser((prev) => ({ ...prev, password1: text }))
+                setUser((prev) => ({ ...prev, password1: text.target.value }))
               }
             />
           </Form.Item>
@@ -249,9 +273,8 @@ const Register = () => {
               prefix={<LockOutlined className='site-form-item-icon' />}
               type='password'
               placeholder='Təkrar şifrə'
-              value={user.password2}
               onChange={(text) =>
-                setUser((prev) => ({ ...prev, password2: text }))
+                setUser((prev) => ({ ...prev, password2: text.target.value }))
               }
             />
           </Form.Item>
@@ -270,7 +293,7 @@ const Register = () => {
               htmlType='submit'
               className='login-form-button'
             >
-              Qeydiyyat
+              {register}
             </Button>
           </Form.Item>
         </Form>
