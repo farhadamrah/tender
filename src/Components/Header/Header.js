@@ -24,29 +24,29 @@ const Header = () => {
 
   return (
     <>
-      <header className="main-header">
-        <div className="toggle-button" onClick={handleClick}>
+      <header className='main-header'>
+        <div className='toggle-button' onClick={handleClick}>
           <FontAwesomeIcon icon={faBars} />
         </div>
 
-        <nav className="main-navbar">
-          <ul className="main-navbar__items">
-            <li className="main-navbar__item">
-              <Link to="/">
+        <nav className='main-navbar'>
+          <ul className='main-navbar__items'>
+            <li className='main-navbar__item'>
+              <Link to='/'>
                 <FontAwesomeIcon icon={faHome} />
               </Link>
             </li>
-            <li className="main-navbar__item">
-              <Link to="/login">
+            <li className='main-navbar__item'>
+              <Link to='/login'>
                 <FontAwesomeIcon icon={faSignInAlt} />
               </Link>
             </li>
-            <li className="main-navbar__item">
-              <Link to="/profile">
+            <li className='main-navbar__item'>
+              <Link to='/profile'>
                 <FontAwesomeIcon icon={faUserAlt} />
               </Link>
             </li>
-            <li className="main-navbar__item">
+            <li className='main-navbar__item'>
               <Link>
                 <FontAwesomeIcon icon={faGlobe} />
               </Link>
@@ -61,33 +61,33 @@ const Header = () => {
       />
 
       <nav className={collapsed ? 'mobile-nav active' : 'mobile-nav'}>
-        <ul className="mobile-nav__items">
-          <li className="mobile-nav__item" onClick={handleClick}>
-            <Link to="/add-order">Sifariş Yerləşdir</Link>
+        <ul className='mobile-nav__items'>
+          <li className='mobile-nav__item' onClick={handleClick}>
+            <Link to='/add-order'>Sifariş Yerləşdir</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
-            <Link to="/service-orders">Xidmət Sifarişləri</Link>
+          <li className='mobile-nav__item' onClick={handleClick}>
+            <Link to='/service-orders'>Xidmət Sifarişləri</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
-            <Link>Məhsul Sifarişləri</Link>
+          <li className='mobile-nav__item' onClick={handleClick}>
+            <Link to='/produce-orders'>Məhsul Sifarişləri</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
-            <Link>Şirkətlər</Link>
+          <li className='mobile-nav__item' onClick={handleClick}>
+            <Link to='/companies'>Şirkətlər</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
+          <li className='mobile-nav__item' onClick={handleClick}>
             <Link>Mağaza</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
+          <li className='mobile-nav__item' onClick={handleClick}>
             <Link>Xəbərlər</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
+          <li className='mobile-nav__item' onClick={handleClick}>
             <Link>Təlimat</Link>
           </li>
-          <li className="mobile-nav__item" onClick={handleClick}>
+          <li className='mobile-nav__item' onClick={handleClick}>
             <Link>Ödənişli Xidmətlər</Link>
           </li>
         </ul>
-        <div className="close-btn" onClick={handleClose}>
+        <div className='close-btn' onClick={handleClose}>
           <FontAwesomeIcon icon={faCaretSquareLeft} />
         </div>
       </nav>
