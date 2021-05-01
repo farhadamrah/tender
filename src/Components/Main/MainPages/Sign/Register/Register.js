@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Register.scss';
 import 'antd/dist/antd.css';
-import { auth, db } from '../../../../../../firebase';
+import { auth, db } from '../../../../../firebase';
 import { Form, Input, Button, Checkbox, Radio } from 'antd';
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
 
