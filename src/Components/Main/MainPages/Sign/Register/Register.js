@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Register.scss';
 import 'antd/dist/antd.css';
@@ -36,6 +36,15 @@ const Register = () => {
   //   number: '',
   // });
   // const { formName, email, number } = formData;
+
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => {
+      unlisten();
+    };
+  }, [history]);
 
   const onFinish = (values) => {
     if (checked) {
