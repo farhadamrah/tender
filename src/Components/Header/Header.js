@@ -75,10 +75,10 @@ const Header = () => {
             <Link to='/companies'>Şirkətlər</Link>
           </li>
           <li className='mobile-nav__item' onClick={handleClick}>
-            <Link>Mağaza</Link>
+            <Link to='/store'>Mağaza</Link>
           </li>
           <li className='mobile-nav__item' onClick={handleClick}>
-            <Link>Xəbərlər</Link>
+            <Link to='/news'>Xəbərlər</Link>
           </li>
           <li className='mobile-nav__item' onClick={handleClick}>
             <Link>Təlimat</Link>

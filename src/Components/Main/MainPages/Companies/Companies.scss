@@ -39,12 +39,17 @@
         display: flex;
         justify-content: space-between;
         padding: 0.2rem 0.5rem;
+        font-weight: bold;
+        color: #303030;
 
         span {
-          background-color: #f1f1f1;
+          background-color: #f7f7f7;
+          color: #838383;
           width: 2.5rem;
           text-align: center;
           border-radius: 0.2rem;
+          font-weight: 600;
+          font-size: 0.8rem;
         }
       }
     }

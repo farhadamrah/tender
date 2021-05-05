@@ -1,0 +1,94 @@
+.store-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .store-container__list {
+    background-color: white;
+    padding: 1.5rem 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.082);
+
+    .list-header__title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 750;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 2em;
+    }
+
+    .category-list {
+      width: 100%;
+
+      .list-item {
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+
+        .item-name {
+          font-weight: bold;
+          color: #303030;
+        }
+
+        .item-count {
+          background-color: #f7f7f7;
+          color: #838383;
+          width: 2.5rem;
+          text-align: center;
+          border-radius: 0.2rem;
+          font-weight: 600;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .filter-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    .product-count {
+      background-color: #ffffff;
+      color: #707070;
+      padding: 0.4rem 1.2rem;
+      text-align: center;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.ant-select {
+  width: 8rem;
+  border-radius: 1rem !important;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+.ant-select-item {
+  font-weight: 500;
+}
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #0b30ffad;
+}
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border-color: rgba(12, 12, 235, 0.712);
+  border-right-width: 1px !important;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.247);
+}

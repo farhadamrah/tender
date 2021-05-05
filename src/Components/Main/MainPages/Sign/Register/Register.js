@@ -15,9 +15,9 @@ const Register = () => {
   const history = useHistory();
   const value1 = 'Adınız';
   const value2 = 'Şirkətinizin adı';
-  const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+  const loadingIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-  const [name, setName] = useState(value1);
+  const [statusName, setStatusName] = useState(value1);
   const [checked, setChecked] = useState(false);
   const [register, setRegister] = useState('Qeydiyyat');
   const [user, setUser] = useState({
@@ -28,13 +28,6 @@ const Register = () => {
     password1: '',
     password2: '',
   });
-
-  // const [formData, setFormData] = useState({
-  //   formName: 'test',
-  //   email: '',
-  //   number: '',
-  // });
-  // const { formName, email, number } = formData;
 
   useEffect(() => {
     const unlisten = history.listen(() => {
@@ -71,7 +64,7 @@ const Register = () => {
         user.phone &&
         user.password1 === user.password2
       ) {
-        setRegister(<Spin indicator={antIcon} />);
+        setRegister(<Spin indicator={loadingIcon} />);
         auth
           .createUserWithEmailAndPassword(user.email, user.password1)
           .then((authUser) => {
@@ -120,8 +113,10 @@ const Register = () => {
     }
   };
 
-  const onChangeName = (e) => {
-    setName(e.target.value);
+  console.log(user);
+
+  const onChangeStatus = (e) => {
+    setStatusName(e.target.value);
     if (e.target.value === 'Adınız') {
       setUser((prev) => ({ ...prev, status: 0 }));
     } else {
@@ -137,20 +132,24 @@ const Register = () => {
     <>
       <div className='form'>
         <Radio.Group
-          onChange={onChangeName}
-          // value={name}
+          onChange={onChangeStatus}
+          // value={statusName}
           optionType='button'
           className='change-buttons'
         >
           <Radio
             value={value1}
-            className={name === value1 ? 'radio-btn selected-btn' : 'radio-btn'}
+            className={
+              statusName === value1 ? 'radio-btn selected-btn' : 'radio-btn'
+            }
           >
             Fiziki şəxs
           </Radio>
           <Radio
             value={value2}
-            className={name !== value1 ? 'radio-btn selected-btn' : 'radio-btn'}
+            className={
+              statusName !== value1 ? 'radio-btn selected-btn' : 'radio-btn'
+            }
           >
             Şirkət
           </Radio>
@@ -165,13 +164,13 @@ const Register = () => {
           onFinish={onFinish}
         >
           <Form.Item
-            label={name}
+            label={statusName}
             name='username'
             rules={[
               {
                 required: true,
                 message:
-                  name === value1
+                  statusName === value1
                     ? 'Zəhmət olmazsa adınızı daxil edin'
                     : 'Zəhmət olmazsa şirkətinizin adını daxil edin',
               },
@@ -180,7 +179,7 @@ const Register = () => {
             <Input
               prefix={<UserOutlined className='site-form-item-icon' />}
               placeholder={
-                name === value1
+                statusName === value1
                   ? 'Adınızı daxil edin'
                   : 'Şirkətinizin adını daxil edin'
               }
