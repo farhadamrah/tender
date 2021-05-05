@@ -3,7 +3,7 @@ import SearchBar from '../../SearchBar/SearchBar';
 import Filter from '../../Filter/Filter';
 import './Store.scss';
 import { listData, productData } from './StoreCategoriesData';
-import { Select } from 'antd';
+import { Select, Rate } from 'antd';
 
 const Store = () => {
   const { Option } = Select;
@@ -50,7 +50,9 @@ const Store = () => {
               <div className='content'>
                 <h1 className='product-title'>{product.title}</h1>
                 <p className='product-cost'>{`${product.cost} AZN`}</p>
-                <div className='rating'>{'ULDUZLAR'}</div>
+                <div className='rating'>
+                  <Rate defaultValue={4} />
+                </div>
                 <p className='product-comments'>{`${product.comment} rəy`}</p>
               </div>
             </div>

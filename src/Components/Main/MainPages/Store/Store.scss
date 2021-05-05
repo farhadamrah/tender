@@ -66,6 +66,32 @@
       font-size: 0.9rem;
     }
   }
+
+  .product-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .product-box {
+      background-color: white;
+      padding: 1rem;
+      width: 48%;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+
+      .image-container {
+        margin-bottom: 0.8rem;
+      }
+
+      .content {
+      }
+    }
+    .product-box:hover {
+      box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.164);
+      transform: scale(1.04);
+      transition: all 0.3s;
+    }
+  }
 }
 
 .ant-select {

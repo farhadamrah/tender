@@ -92,14 +92,14 @@ const productData = [
     location: 'Bakı',
     comment: 0,
   },
-  // {
-  //   image: '',
-  //   title: '',
-  //   cost: '',
-  //   rating: '',
-  //   location: '',
-  //   comment: '',
-  // },
+  {
+    image: img1,
+    title: 'Mebel',
+    cost: 0,
+    rating: '',
+    location: 'Bakı',
+    comment: 0,
+  },
 ];
 
 export { listData, productData };
