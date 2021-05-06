@@ -69,13 +69,14 @@
 
   .product-boxes {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.9rem 0.7rem;
 
     .product-box {
       background-color: white;
       padding: 1rem;
-      width: 48%;
+      // width: 98%;
       border-radius: 0.5rem;
       transition: all 0.3s;
 
@@ -84,6 +85,13 @@
       }
 
       .content {
+        width: 100%;
+        .content__label {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
       }
     }
     .product-box:hover {

@@ -48,8 +48,10 @@ const Store = () => {
                 <img src={product.image} alt='mebel' />
               </div>
               <div className='content'>
-                <h1 className='product-title'>{product.title}</h1>
-                <p className='product-cost'>{`${product.cost} AZN`}</p>
+                <div className='content__label'>
+                  <h1 className='product-title'>{product.title}</h1>
+                  <p className='product-cost'>{`${product.cost} AZN`}</p>
+                </div>
                 <div className='rating'>
                   <Rate defaultValue={4} />
                 </div>
