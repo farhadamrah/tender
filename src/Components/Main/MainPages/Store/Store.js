@@ -4,6 +4,7 @@ import Filter from '../../Filter/Filter';
 import './Store.scss';
 import { listData, productData } from './StoreCategoriesData';
 import { Select, Rate } from 'antd';
+// import 'antd/dist/antd.css';
 
 const Store = () => {
   const { Option } = Select;
@@ -49,14 +50,14 @@ const Store = () => {
               </div>
               <div className='content'>
                 <div className='content__label'>
-                  <h1 className='product-title'>{product.title}</h1>
-                  <p className='product-cost'>{`${product.cost} AZN`}</p>
+                  <span className='product-title'>{product.title}</span>
+                  <span className='product-cost'>{`${product.cost} AZN`}</span>
                 </div>
                 <div className='rating'>
                   <Rate defaultValue={product.rating} />
                 </div>
-                <p className='product-comments'>{`${product.comment} rəy`}</p>
-                <p className='product-location'>{product.location}</p>
+                <span className='product-comments'>{`${product.comment} rəy`}</span>
+                <span className='product-location'>{product.location}</span>
               </div>
             </div>
           ))}

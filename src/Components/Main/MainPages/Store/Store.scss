@@ -76,17 +76,22 @@
     .product-box {
       background-color: white;
       padding: 1rem;
-      // width: 98%;
       border-radius: 0.5rem;
       transition: all 0.3s;
       cursor: pointer;
 
       .image-container {
         margin-bottom: 0.8rem;
+        img {
+          width: 100%;
+        }
       }
 
       .content {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+
         .content__label {
           width: 100%;
           display: flex;
@@ -126,4 +131,7 @@
   border-right-width: 1px !important;
   outline: 0;
   box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.247);
+}
+.ant-select-arrow {
+  margin-top: -0.9rem;
 }

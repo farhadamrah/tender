@@ -3,8 +3,6 @@ import Filter from '../../Filter/Filter';
 import SearchBar from '../../SearchBar/SearchBar';
 import { servicesData, companyData } from './CompaniesData';
 import './Companies.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Companies = () => {
   return (

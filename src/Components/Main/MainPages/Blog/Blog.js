@@ -2,7 +2,11 @@ import React from 'react';
 import './Blog.scss';
 
 const Blog = () => {
-  return <div>Blog</div>;
+  return (
+    <>
+      <div className='container'></div>
+    </>
+  );
 };
 
 export default Blog;
