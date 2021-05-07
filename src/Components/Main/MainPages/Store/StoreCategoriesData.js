@@ -1,4 +1,5 @@
 import img1 from '../../../../assets/images/ProductBoxImage/mebel.jpg';
+import img2 from '../../../../assets/images/ProductBoxImage/domofon.jpg';
 
 const listData = [
   {
@@ -87,32 +88,32 @@ const productData = [
   {
     image: img1,
     title: 'Mebel',
-    cost: 0,
-    rating: '',
+    cost: 60,
+    rating: 4,
     location: 'Bakı',
     comment: 0,
   },
   {
-    image: img1,
-    title: 'Mebel',
-    cost: 0,
-    rating: '',
+    image: img2,
+    title: 'Domofon',
+    cost: 200,
+    rating: 3,
     location: 'Bakı',
-    comment: 0,
+    comment: 1,
+  },
+  {
+    image: img2,
+    title: 'Domofon',
+    cost: 200,
+    rating: 3,
+    location: 'Bakı',
+    comment: 1,
   },
   {
     image: img1,
     title: 'Mebel',
-    cost: 0,
-    rating: '',
-    location: 'Bakı',
-    comment: 0,
-  },
-  {
-    image: img1,
-    title: 'Mebel',
-    cost: 0,
-    rating: '',
+    cost: 60,
+    rating: 4,
     location: 'Bakı',
     comment: 0,
   },

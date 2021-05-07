@@ -10,6 +10,7 @@ import ProduceOrders from './MainPages/ProduceOrders/ProduceOrders';
 import Companies from './MainPages/Companies/Companies';
 import Store from './MainPages/Store/Store';
 import HomePage from './MainPages/HomePage/HomePage';
+import Blog from './MainPages/Blog/Blog';
 import './Main.scss';
 
 const Main = () => {
@@ -27,6 +28,7 @@ const Main = () => {
             <Route path='/produce-orders' component={ProduceOrders} />
             <Route path='/companies' component={Companies} />
             <Route path='/store' component={Store} />
+            <Route path='/blog' component={Blog} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>

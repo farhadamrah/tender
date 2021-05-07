@@ -78,13 +78,13 @@ const Header = () => {
             <Link to='/store'>Mağaza</Link>
           </li>
           <li className='mobile-nav__item' onClick={handleClick}>
-            <Link to='/news'>Xəbərlər</Link>
+            <Link to='/blog'>Bloq</Link>
           </li>
           <li className='mobile-nav__item' onClick={handleClick}>
-            <Link>Təlimat</Link>
+            <Link to='/instruction'>Təlimat</Link>
           </li>
           <li className='mobile-nav__item' onClick={handleClick}>
-            <Link>Ödənişli Xidmətlər</Link>
+            <Link to='/paid-services'>Ödənişli Xidmətlər</Link>
           </li>
         </ul>
         <div className='close-btn' onClick={handleClose}>

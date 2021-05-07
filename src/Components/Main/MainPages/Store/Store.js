@@ -53,9 +53,10 @@ const Store = () => {
                   <p className='product-cost'>{`${product.cost} AZN`}</p>
                 </div>
                 <div className='rating'>
-                  <Rate defaultValue={4} />
+                  <Rate defaultValue={product.rating} />
                 </div>
                 <p className='product-comments'>{`${product.comment} rəy`}</p>
+                <p className='product-location'>{product.location}</p>
               </div>
             </div>
           ))}
