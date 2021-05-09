@@ -16,39 +16,39 @@ const ProduceOrders = () => {
     <>
       <Filter />
       <SearchBar />
-      <div className='tender-container'>
+      <div className='produce-container'>
         {ProduceOrdersData.map((data) => (
-          <div className='tender'>
-            <div className='tender__content'>
-              <h1 className='tender__title'>{data.title}</h1>
-              <FontAwesomeIcon icon={faUserCircle} className='tender__image' />
-              {/* <img src={'tender image'} alt="" /> */}
-              <p className='tender__feedbacks'>
+          <div className='produce'>
+            <div className='produce__content'>
+              <h1 className='produce__title'>{data.title}</h1>
+              <FontAwesomeIcon icon={faUserCircle} className='produce__image' />
+              {/* <img src={'produce image'} alt="" /> */}
+              <p className='produce__feedbacks'>
                 <span className='green'>{data.feedbacks.green}</span>
                 <span>|</span>
                 <span className='red'>{data.feedbacks.red}</span>
                 <span>|</span>
                 <span className='blue'>{data.feedbacks.blue}</span>
               </p>
-              <h1 className='tender__header'>{data.header}</h1>
-              <button type='button' className='tender__details-btn'>
+              <h1 className='produce__header'>{data.header}</h1>
+              <button type='button' className='produce__details-btn'>
                 Ətraflı
               </button>
             </div>
 
-            <div className='tender__footer'>
-              <div className='tender__time footer-item'>
+            <div className='produce__footer'>
+              <div className='produce__time footer-item'>
                 <FontAwesomeIcon icon={faClock} className='footer__icon' />
                 <span className='footer__text'>{`${data.addedDate} gün əvvəl`}</span>
               </div>
-              <div className='tender__date footer-item'>
+              <div className='produce__date footer-item'>
                 <FontAwesomeIcon
                   icon={faCalendarAlt}
                   className='footer__icon'
                 />
                 <span className='footer__text '>{`${data.deadLine}-dək`}</span>
               </div>
-              <div className='tender__offer footer-item'>
+              <div className='produce__offer footer-item'>
                 <FontAwesomeIcon icon={faComment} className='footer__icon' />
                 <span className='footer__text'>{`${data.order} təklif`}</span>
               </div>

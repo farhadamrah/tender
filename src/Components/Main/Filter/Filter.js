@@ -14,7 +14,7 @@ const Filter = () => {
     <>
       <section className='filter-section'>
         <div className='filter-section--header' onClick={handleFilter}>
-          <p className='header__title'>{'Filtr'}</p>
+          <span className='header__title'>{'Filter'}</span>
           <div className='header__icon'>
             <FontAwesomeIcon icon={faFilter} />
           </div>

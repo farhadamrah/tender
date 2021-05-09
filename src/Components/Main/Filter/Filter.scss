@@ -1,5 +1,6 @@
 .filter-section {
   width: 100%;
+  margin-bottom: 1.5rem;
 
   .filter-section--header {
     width: 100%;
@@ -12,7 +13,7 @@
     justify-content: space-between;
     padding: 1.5rem 1rem;
     border-radius: 0.3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     .header__title {
       margin-left: auto;
@@ -24,11 +25,11 @@
   }
 
   .filter-section__filters {
-    margin-top: 1rem;
     position: absolute;
     top: -100%;
     transition: all 0.8s ease;
     opacity: 0;
+    width: 100%;
   }
 
   .filter-section__filters.active {
@@ -36,5 +37,6 @@
     top: 0;
     transition: all 0.8s ease;
     opacity: 1;
+    width: 100%;
   }
 }
