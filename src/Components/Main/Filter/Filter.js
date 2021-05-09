@@ -12,10 +12,10 @@ const Filter = () => {
   };
   return (
     <>
-      <section className="filter-section">
-        <div className="filter-section--header" onClick={handleFilter}>
-          <p className="header__title">{'Filtr'}</p>
-          <div className="header__icon">
+      <section className='filter-section'>
+        <div className='filter-section--header' onClick={handleFilter}>
+          <p className='header__title'>{'Filtr'}</p>
+          <div className='header__icon'>
             <FontAwesomeIcon icon={faFilter} />
           </div>
         </div>

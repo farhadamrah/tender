@@ -6,16 +6,16 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const SearchBar = () => {
   return (
     <>
-      <section className="search-bar">
-        <div className="input-container">
+      <section className='search-bar'>
+        <div className='input-container'>
           <input
-            type="text"
-            className="search-bar__input"
+            type='text'
+            className='search-bar__input'
             placeholder={'Tender axtar'}
           />
-          <FontAwesomeIcon icon={faSearch} className="search-icon" />
+          <FontAwesomeIcon icon={faSearch} className='search-icon' />
         </div>
-        <div className="horizontal-line" />
+        <div className='horizontal-line' />
       </section>
     </>
   );
