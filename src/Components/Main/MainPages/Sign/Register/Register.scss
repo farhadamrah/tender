@@ -9,56 +9,58 @@
   .change-buttons {
     margin-bottom: 1rem;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
 
-    .ant-radio-wrapper span {
-      font-size: 1.1rem;
-    }
-
-    .ant-radio-checked .ant-radio-inner {
-      box-shadow: 0px 0px 5px 2px #1709ddfb;
-      border-color: #4c43d4;
-      background-color: #2113e2ab !important;
-    }
-
-    .ant-radio-wrapper:hover .ant-radio,
-    .ant-radio:hover .ant-radio-inner,
-    .ant-radio-input:focus .ant-radio-inner {
-      border-color: #574de4;
-    }
-
-    .ant-radio-inner::after {
-      background-color: white;
-    }
-
-    // .radio-btn {
-    //   width: 8rem;
-    //   height: 2.5rem;
-    //   padding-bottom: 0.2rem;
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
+    // .ant-radio-wrapper span {
     //   font-size: 1.1rem;
-    //   letter-spacing: 0.05rem;
-    //   font-weight: 500;
-    //   background-color: rgb(96, 88, 236);
-    //   color: white;
-    //   border-radius: 0.5rem;
-    //   transform: scale(1.1);
-    //   border: 1px solid rgba(27, 37, 177, 0.74);
-
-    //   .ant-radio {
-    //     display: none;
-    //   }
     // }
 
-    // .selected-btn {
-    //   background-color: rgb(70, 57, 243);
-    //   transform: scale(1.01);
-    //   border: 3px solid rgba(34, 20, 155, 0.541);
-    //   font-size: 1rem;
-    //   letter-spacing: 0.05rem;
+    // .ant-radio-checked .ant-radio-inner {
+    //   box-shadow: 0px 0px 5px 2px #1709ddfb;
+    //   border-color: #4c43d4;
+    //   background-color: #2113e2ab !important;
     // }
+
+    // .ant-radio-wrapper:hover .ant-radio,
+    // .ant-radio:hover .ant-radio-inner,
+    // .ant-radio-input:focus .ant-radio-inner {
+    //   border-color: #574de4;
+    // }
+
+    // .ant-radio-inner::after {
+    //   background-color: white;
+    // }
+
+    .radio-btn {
+      width: 6.5rem;
+      height: 2.3rem;
+      padding-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.08rem;
+      font-weight: 600;
+      background-color: rgb(96, 88, 236);
+      color: white;
+      border-radius: 0.5rem;
+      transform: scale(1.07);
+      border: 1px solid rgba(27, 37, 177, 0.74);
+      letter-spacing: 0.03rem;
+      margin: 0.2rem;
+
+      .ant-radio {
+        display: none;
+      }
+    }
+
+    .selected-btn {
+      background-color: rgb(70, 57, 243);
+      transform: scale(1.01);
+      border: 3px solid rgba(34, 20, 155, 0.616);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03rem;
+    }
   }
 
   // .radio-container {

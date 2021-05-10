@@ -11,6 +11,7 @@ import Companies from './MainPages/Companies/Companies';
 import Store from './MainPages/Store/Store';
 import HomePage from './MainPages/HomePage/HomePage';
 import Blog from './MainPages/Blog/Blog';
+import Instruction from './MainPages/Instruction/Instruction';
 import './Main.scss';
 
 const Main = () => {
@@ -29,6 +30,7 @@ const Main = () => {
             <Route path='/companies' component={Companies} />
             <Route path='/store' component={Store} />
             <Route path='/blog' component={Blog} />
+            <Route path='/instruction' component={Instruction} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>

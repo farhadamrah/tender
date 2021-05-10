@@ -1,0 +1,39 @@
+.post {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.082);
+  padding: 1rem;
+
+  .post-date {
+    color: #c0c0c0;
+  }
+
+  .post-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .post-image {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+  }
+
+  .post-article {
+    font-weight: 500;
+  }
+}
+
+.post:nth-child(1) {
+  margin-top: 6rem;
+}
+.post:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.post:hover {
+  box-shadow: 1px 2px 8px 3px rgba(0, 0, 0, 0.144);
+}
