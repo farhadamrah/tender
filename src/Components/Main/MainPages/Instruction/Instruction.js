@@ -5,11 +5,11 @@ import { Collapse } from 'antd';
 const Instruction = () => {
   const { Panel } = Collapse;
   const header1 =
-    '1. Tender.az platformasında əsas ayarlarınızı redaktə etmək üçün bu video təlimatdan istifadə edin.';
+    'TenderWorld platformasında əsas ayarlarınızı redaktə etmək üçün bu video təlimatdan istifadə edin.';
   const header2 =
-    '2. Tender.az platformasında portfolionuza yeni işlər əlavə etmək üçün bu video təlimatdan istifadə edin.';
+    'TenderWorld platformasında portfolionuza yeni işlər əlavə etmək üçün bu video təlimatdan istifadə edin.';
   const header3 =
-    '3. Tender.az platformasında mağazaya mal əlavə etmək üçün bu video təlimatdan istifadə edin.';
+    'TenderWorld platformasında mağazaya mal əlavə etmək üçün bu video təlimatdan istifadə edin.';
 
   return (
     <>

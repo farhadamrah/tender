@@ -8,5 +8,22 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    color: rgb(43, 43, 43);
+  }
+
+  .ant-collapse {
+    border-radius: 0.4rem;
+    // background: none;
+
+    // .ant-collapse-item {
+    //   background: white;
+    // }
+    // .ant-collapse-item-active {
+    //   margin-bottom: 0.1rem;
+    // }
+    .ant-collapse-content-box {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
