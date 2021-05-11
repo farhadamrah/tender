@@ -13,6 +13,7 @@ import HomePage from './MainPages/HomePage/HomePage';
 import Blog from './MainPages/Blog/Blog';
 import Instruction from './MainPages/Instruction/Instruction';
 import './Main.scss';
+import Profile from './MainPages/Profile/Profile';
 
 const Main = () => {
   return (
@@ -24,6 +25,7 @@ const Main = () => {
             <Route path='/find-password' component={FindPassword} />
             <Route path='/register' component={Register} />
             <Route path='/rules' component={Rules} />
+            <Route path='/profile' component={Profile} />
             <Route path='/add-order' component={AddOrder} />
             <Route path='/service-orders' component={ServiceOrders} />
             <Route path='/produce-orders' component={ProduceOrders} />
