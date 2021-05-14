@@ -54,12 +54,6 @@ const Profile = () => {
                 <Option value='other'>10 ildən artıq</Option>
               </Select>
             </Form.Item>
-
-            <Form.Item>
-              <Button type='primary' htmlType='submit'>
-                Submit
-              </Button>
-            </Form.Item>
           </div>
 
           <div className='information-container'>
@@ -152,19 +146,20 @@ const Profile = () => {
                       block
                       icon={<PlusOutlined />}
                     >
-                      Add field
+                      Əlavə et
                     </Button>
                   </Form.Item>
                 </>
               )}
             </Form.List>
           </div>
+          <div className='buttons'>
+            <Form.Item>
+              <Button type='primary'>Yadda saxla</Button>
+              <Button type='primary'>Ləgv et</Button>
+            </Form.Item>
+          </div>
         </Form>
-
-        <Form.Item>
-          <Button type='primary'>Yadda saxla</Button>
-          <Button type='primary'>Ləgv et</Button>
-        </Form.Item>
       </div>
     </>
   );

@@ -40,7 +40,7 @@
       justify-content: center;
       font-size: 1.08rem;
       font-weight: 600;
-      background-color: rgb(96, 88, 236);
+      background-color: #0011ff;
       color: white;
       border-radius: 0.5rem;
       transform: scale(1.07);
@@ -54,7 +54,7 @@
     }
 
     .selected-btn {
-      background-color: rgb(70, 57, 243);
+      background-color: #0011ff;
       transform: scale(1.01);
       border: 3px solid rgba(34, 20, 155, 0.616);
       font-size: 1rem;
@@ -111,8 +111,8 @@
   }
 
   .ant-btn-primary {
-    background-color: #5145fc;
-    border-color: #483bf7;
+    background-color: #1929ff;
+    border-color: #0011ff;
     border-radius: 0.4rem;
     width: 100%;
     padding: 1rem;
@@ -127,13 +127,13 @@
   }
   .ant-btn-primary:hover,
   .ant-btn-primary:focus {
-    background-color: #2e23ce;
-    border-color: #2e23ce;
+    background-color: #0011ff;
+    border-color: #0f1fff;
   }
 
   .ant-input-affix-wrapper:hover,
   .ant-input:hover {
-    border-color: #5850eb !important;
+    border-color: #2231ff !important;
   }
 
   .ant-input-affix-wrapper {
@@ -145,7 +145,7 @@
   .ant-input-affix-wrapper:focus,
   .ant-input-affix-wrapper-focused,
   .ant-input:focus {
-    border-color: #1b0ddf;
+    border-color: #0011ff;
     box-shadow: 0 0 0 2px #150ab644;
   }
 
@@ -160,15 +160,15 @@
   }
 
   .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: #2e23ce;
-    border-color: #5145fc;
+    background-color: #0011ff;
+    border-color: #2533ff;
   }
 
   .ant-checkbox-wrapper a {
-    color: #4338e4;
+    color: #0011ff;
   }
   .ant-checkbox-wrapper a:hover {
-    color: #7970fc;
+    color: #2331ff;
     text-decoration: underline;
   }
 
@@ -180,6 +180,6 @@
   .ant-checkbox-wrapper:hover .ant-checkbox-inner,
   .ant-checkbox:hover .ant-checkbox-inner,
   .ant-checkbox-input:focus + .ant-checkbox-inner {
-    border-color: #5145fc;
+    border-color: #0011ff;
   }
 }
