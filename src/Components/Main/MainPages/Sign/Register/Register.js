@@ -131,6 +131,7 @@ const Register = () => {
   return (
     <>
       <div className='form'>
+        <label className='change-buttons-label'>Status</label>
         <Radio.Group
           onChange={onChangeStatus}
           // value={statusName}
@@ -139,17 +140,17 @@ const Register = () => {
         >
           <Radio
             value={value1}
-            className={
-              statusName === value1 ? 'radio-btn selected-btn' : 'radio-btn'
-            }
+            // className={
+            //   statusName === value1 ? 'radio-btn selected-btn' : 'radio-btn'
+            // }
           >
             Fiziki şəxs
           </Radio>
           <Radio
             value={value2}
-            className={
-              statusName !== value1 ? 'radio-btn selected-btn' : 'radio-btn'
-            }
+            // className={
+            //   statusName !== value1 ? 'radio-btn selected-btn' : 'radio-btn'
+            // }
           >
             Şirkət
           </Radio>
