@@ -10,7 +10,7 @@ const Footer = () => {
           <h1 className='footer__title'>Tender World</h1>
           <ul className='footer__list'>
             <li className='list__item'>
-              <Link to='/contact-us'>Bizimlə əlaqə</Link>
+              <Link to='/contact'>Bizimlə əlaqə</Link>
             </li>
             <li className='list__item'>
               <Link to='/rules'>İstifadəçi qaydaları</Link>
