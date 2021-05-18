@@ -46,7 +46,8 @@
       transform: scale(1.07);
       border: 1px solid rgba(116, 116, 116, 0.74);
       // letter-spacing: 0.03rem;
-      margin: 0.15rem;
+      // margin: 0.15rem;
+      transition: all 0.3s ease-in-out;
 
       .ant-radio {
         display: none;

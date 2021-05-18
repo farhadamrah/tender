@@ -2,8 +2,7 @@
   .container__title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #3d32d3;
-    text-shadow: 1px 1px 2px #130a8a;
+    color: #36363b;
     margin-bottom: 1.5rem;
   }
 
@@ -15,21 +14,52 @@
       display: flex;
 
       // .ant-radio-button-wrapper {
+      // .radio-btn {
+      //   width: 7rem;
+      //   height: 2.3rem;
+      //   line-height: 1rem;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   font-size: 1.1rem;
+      //   letter-spacing: 0.05rem;
+      //   font-weight: 500;
+      //   background-color: rgb(96, 88, 236);
+      //   color: white;
+      //   border-radius: 0.5rem;
+      //   transform: scale(1.1);
+      //   border: 1px solid rgba(27, 37, 177, 0.74);
+
+      //   .ant-radio {
+      //     display: none;
+      //   }
+      // }
+
+      // .selected-btn {
+      //   background-color: rgb(70, 57, 243);
+      //   transform: scale(1.01);
+      //   border: 3px solid rgba(34, 20, 155, 0.541);
+      //   font-size: 1rem;
+      //   letter-spacing: 0.05rem;
+      // }
+
       .radio-btn {
-        width: 7rem;
+        width: 6.5rem;
         height: 2.3rem;
-        line-height: 1rem;
+        padding-bottom: 0.1rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.1rem;
-        letter-spacing: 0.05rem;
-        font-weight: 500;
-        background-color: rgb(96, 88, 236);
-        color: white;
+        font-size: 1.08rem;
+        font-weight: 600;
+        background-color: #e9e7f7;
+        color: rgb(77, 77, 77);
         border-radius: 0.5rem;
-        transform: scale(1.1);
-        border: 1px solid rgba(27, 37, 177, 0.74);
+        transform: scale(1.07);
+        border: 1px solid rgba(116, 116, 116, 0.74);
+        // letter-spacing: 0.03rem;
+        // margin: 0.15rem;
+        transition: all 0.3s ease-in-out;
 
         .ant-radio {
           display: none;
@@ -37,11 +67,13 @@
       }
 
       .selected-btn {
-        background-color: rgb(70, 57, 243);
+        background-color: #0011ff;
+        color: white;
         transform: scale(1.01);
-        border: 3px solid rgba(34, 20, 155, 0.541);
+        border: 3px solid rgba(20, 7, 136, 0.712);
         font-size: 1rem;
-        letter-spacing: 0.05rem;
+        font-weight: 600;
+        // letter-spacing: 0.03rem;
       }
     }
 
