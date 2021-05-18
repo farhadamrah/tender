@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.scss';
 import Form from 'antd/lib/form/Form';
-import { Input, Button } from 'antd';
+import { Form, Input, Button } from 'antd';
 
 const Contact = () => {
   const message = 'Zəhmət olmazsa, məlumatı daxil edin';
@@ -20,7 +20,7 @@ const Contact = () => {
           //   onFinish={onFinish}
           //   onFinishFailed={onFinishFailed}
         >
-          {/* <Form.Item
+          <Form.Item
             name='username'
             rules={[
               {
@@ -63,7 +63,7 @@ const Contact = () => {
             <Button type='primary' htmlType='submit' className='cancel-btn'>
               Ləğv et
             </Button>
-          </Form.Item> */}
+          </Form.Item>
         </Form>
       </div>
     </>
