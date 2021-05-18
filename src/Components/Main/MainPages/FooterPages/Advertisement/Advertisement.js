@@ -1,11 +1,7 @@
 import React from 'react';
-import './Contact.scss';
-import Form from 'antd/lib/form/Form';
-import { Input, Button } from 'antd';
+import './Advertisement.scss';
 
-const Contact = () => {
-  const message = 'Zəhmət olmazsa, məlumatı daxil edin';
-
+const Advertisement = () => {
   return (
     <>
       <div className='contact container'>
@@ -71,4 +67,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Advertisement;

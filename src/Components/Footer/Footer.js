@@ -10,10 +10,10 @@ const Footer = () => {
           <h1 className='footer__title'>Tender World</h1>
           <ul className='footer__list'>
             <li className='list__item'>
-              <Link to='/connection'>Bizimlə əlaqə</Link>
+              <Link to='/rules'>İstifadəçi qaydaları</Link>
             </li>
             <li className='list__item'>
-              <Link to='/rules'>İstifadəçi qaydaları</Link>
+              <Link to='/contact'>Bizimlə əlaqə</Link>
             </li>
             <li className='list__item'>
               <Link to='/advertisement'>Saytda reklam</Link>
