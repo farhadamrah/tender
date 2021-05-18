@@ -13,9 +13,9 @@ import HomePage from './MainPages/HomePage/HomePage';
 import Blog from './MainPages/Blog/Blog';
 import Instruction from './MainPages/Instruction/Instruction';
 import Profile from './MainPages/Profile/Profile';
-import './Main.scss';
 import Contact from './MainPages/FooterPages/Contact/Contact';
 import Advertisement from './MainPages/FooterPages/Advertisement/Advertisement';
+import './Main.scss';
 
 const Main = () => {
   return (

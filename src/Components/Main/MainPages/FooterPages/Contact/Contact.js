@@ -12,7 +12,7 @@ const Contact = () => {
         <h1 className='contact-title'>
           Təklif və tənqidlərinizi bizə bildirə bilərsiniz
         </h1>
-        {/* <Form
+        <Form
           name='Əlaqə'
           //   initialValues={{
           //     remember: true,
@@ -65,7 +65,7 @@ const Contact = () => {
               Ləğv et
             </Button>
           </Form.Item>
-        </Form> */}
+        </Form>
       </div>
     </>
   );
