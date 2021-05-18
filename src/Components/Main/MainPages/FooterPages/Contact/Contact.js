@@ -1,6 +1,5 @@
 import React from 'react';
 import './Contact.scss';
-import Form from 'antd/lib/form/Form';
 import { Form, Input, Button } from 'antd';
 
 const Contact = () => {
