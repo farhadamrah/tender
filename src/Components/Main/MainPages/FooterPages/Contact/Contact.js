@@ -20,7 +20,7 @@ const Contact = () => {
           //   onFinish={onFinish}
           //   onFinishFailed={onFinishFailed}
         >
-          <Form.Item
+          {/* <Form.Item
             name='username'
             rules={[
               {
@@ -63,7 +63,7 @@ const Contact = () => {
             <Button type='primary' htmlType='submit' className='cancel-btn'>
               Ləğv et
             </Button>
-          </Form.Item>
+          </Form.Item> */}
         </Form>
       </div>
     </>
