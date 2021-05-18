@@ -12,11 +12,11 @@ const Contact = () => {
         <h1 className='contact-title'>
           Təklif və tənqidlərinizi bizə bildirə bilərsiniz
         </h1>
-        {/* <Form
-          name='Əlaqə'
-          //   initialValues={{
-          //     remember: true,
-          //   }}
+        <Form
+          name='contact'
+          initialValues={{
+            remember: true,
+          }}
           //   onFinish={onFinish}
           //   onFinishFailed={onFinishFailed}
         >
@@ -32,7 +32,6 @@ const Contact = () => {
             <Input placeholder='Ad,Soyad' />
           </Form.Item>
           <Form.Item
-            label=''
             name='email'
             rules={[
               {
@@ -65,7 +64,7 @@ const Contact = () => {
               Ləğv et
             </Button>
           </Form.Item>
-        </Form> */}
+        </Form>
       </div>
     </>
   );
