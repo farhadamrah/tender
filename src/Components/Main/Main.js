@@ -15,7 +15,6 @@ import Instruction from './MainPages/Instruction/Instruction';
 import Profile from './MainPages/Profile/Profile';
 import Contact from './MainPages/FooterPages/Contact/Contact';
 import './Main.scss';
-import Advertisement from './MainPages/FooterPages/Advertisement/Advertisement';
 
 const Main = () => {
   return (
@@ -36,7 +35,6 @@ const Main = () => {
             <Route path='/blog' component={Blog} />
             <Route path='/instruction' component={Instruction} />
             <Route path='/contact' component={Contact} />
-            <Route path='/advertisement' component={Advertisement} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>
