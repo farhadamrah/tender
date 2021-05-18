@@ -13,8 +13,8 @@ import HomePage from './MainPages/HomePage/HomePage';
 import Blog from './MainPages/Blog/Blog';
 import Instruction from './MainPages/Instruction/Instruction';
 import Profile from './MainPages/Profile/Profile';
-import Contact from './MainPages/FooterPages/Contact/Contact';
 import './Main.scss';
+import Elaqe from './MainPages/FooterPages/Contact/Contact';
 
 const Main = () => {
   return (
@@ -34,7 +34,7 @@ const Main = () => {
             <Route path='/store' component={Store} />
             <Route path='/blog' component={Blog} />
             <Route path='/instruction' component={Instruction} />
-            <Route path='/connection' component={Contact} />
+            <Route path='/connection' component={Elaqe} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>

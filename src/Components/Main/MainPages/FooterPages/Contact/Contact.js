@@ -3,7 +3,7 @@ import './Contact.scss';
 import Form from 'antd/lib/form/Form';
 import { Input, Button } from 'antd';
 
-const Contact = () => {
+const Elaqe = () => {
   const message = 'Zəhmət olmazsa, məlumatı daxil edin';
 
   return (
@@ -71,4 +71,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Elaqe;
