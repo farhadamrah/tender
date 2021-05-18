@@ -34,7 +34,7 @@ const Main = () => {
             <Route path='/store' component={Store} />
             <Route path='/blog' component={Blog} />
             <Route path='/instruction' component={Instruction} />
-            <Route path='/contact-us' component={Contact} />
+            <Route path='/connection' component={Contact} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>
