@@ -12,9 +12,10 @@ import Store from './MainPages/Store/Store';
 import HomePage from './MainPages/HomePage/HomePage';
 import Blog from './MainPages/Blog/Blog';
 import Instruction from './MainPages/Instruction/Instruction';
-import './Main.scss';
 import Profile from './MainPages/Profile/Profile';
 import Contact from './MainPages/FooterPages/Contact/Contact';
+import './Main.scss';
+import Advertisement from './MainPages/FooterPages/Advertisement/Advertisement';
 
 const Main = () => {
   return (
@@ -35,6 +36,7 @@ const Main = () => {
             <Route path='/blog' component={Blog} />
             <Route path='/instruction' component={Instruction} />
             <Route path='/contact' component={Contact} />
+            <Route path='/advertisement' component={Advertisement} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>
