@@ -1,49 +1,51 @@
-.ant-collapse {
-  margin-top: 5rem;
-  margin-bottom: 1.5rem;
-  border: none;
+.filter-container {
+  .ant-collapse {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    border: none;
 
-  .ant-collapse-header {
-    color: white !important;
-    width: 100%;
-    background: #3343be;
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    border-radius: 0.5rem !important;
-    position: relative;
-  }
+    .ant-collapse-header {
+      color: white !important;
+      width: 100%;
+      background: #3343be;
+      text-align: center;
+      font-size: large;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      border-radius: 0.5rem !important;
+      position: relative;
+    }
 
-  .fa-filter {
-    position: absolute;
-    right: 10%;
-    margin-top: 1.1rem;
-    font-size: 1.2rem;
-    color: white;
-    z-index: 2;
-  }
+    .fa-filter {
+      position: absolute;
+      right: 10%;
+      margin-top: 1.1rem;
+      font-size: 1.2rem;
+      color: white;
+      z-index: 2;
+    }
 
-  .ant-collapse-arrow {
-    display: none !important;
-  }
+    .ant-collapse-arrow {
+      display: none !important;
+    }
 
-  .ant-collapse-item {
-    background-color: #e9e7f7;
-    border: none !important;
-  }
+    .ant-collapse-item {
+      background-color: #e9e7f7;
+      border: none !important;
+    }
 
-  .ant-collapse-content-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    padding-top: 1rem;
-  }
+    .ant-collapse-content-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      padding-top: 1rem;
+    }
 
-  .ant-collapse-content {
-    background-color: none;
-    width: 100%;
-    background-color: #e9e7f7;
+    .ant-collapse-content {
+      background-color: none;
+      width: 100%;
+      background-color: #e9e7f7;
+    }
   }
 }

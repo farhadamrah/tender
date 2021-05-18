@@ -13,7 +13,7 @@ const Footer = () => {
               <Link to='/contact-us'>Bizimlə əlaqə</Link>
             </li>
             <li className='list__item'>
-              <Link to='/user-rules'>İstifadəçi qaydaları</Link>
+              <Link to='/rules'>İstifadəçi qaydaları</Link>
             </li>
             <li className='list__item'>
               <Link to='/advertisement'>Saytda reklam</Link>

@@ -10,15 +10,17 @@ const Filter = () => {
 
   return (
     <>
-      <Collapse accordion>
-        <FontAwesomeIcon icon={faFilter} />
-        <Panel header={`Filter`} key='1'>
-          <DropDown />
-          <DropDown />
-          <DropDown />
-          <DropDown />
-        </Panel>
-      </Collapse>
+      <div className='filter-container'>
+        <Collapse accordion>
+          <FontAwesomeIcon icon={faFilter} />
+          <Panel header={`Filter`} key='1'>
+            <DropDown />
+            <DropDown />
+            <DropDown />
+            <DropDown />
+          </Panel>
+        </Collapse>
+      </div>
     </>
   );
 };
