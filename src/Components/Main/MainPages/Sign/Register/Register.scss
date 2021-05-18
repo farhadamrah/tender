@@ -34,14 +34,14 @@
     .radio-btn {
       width: 6.5rem;
       height: 2.3rem;
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.08rem;
       font-weight: 600;
       background-color: #e9e7f7;
-      color: white;
+      color: rgb(77, 77, 77);
       border-radius: 0.5rem;
       transform: scale(1.07);
       border: 1px solid rgba(116, 116, 116, 0.74);
@@ -55,6 +55,7 @@
 
     .selected-btn {
       background-color: #0011ff;
+      color: white;
       transform: scale(1.01);
       border: 3px solid rgba(20, 7, 136, 0.712);
       font-size: 1rem;
