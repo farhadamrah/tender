@@ -14,6 +14,7 @@ import Blog from './MainPages/Blog/Blog';
 import Instruction from './MainPages/Instruction/Instruction';
 import './Main.scss';
 import Profile from './MainPages/Profile/Profile';
+import ContactUs from './MainPages/FooterPages/ContactUs/ContactUs';
 
 const Main = () => {
   return (
@@ -33,6 +34,7 @@ const Main = () => {
             <Route path='/store' component={Store} />
             <Route path='/blog' component={Blog} />
             <Route path='/instruction' component={Instruction} />
+            <Route path='/contact-us' component={ContactUs} />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>
