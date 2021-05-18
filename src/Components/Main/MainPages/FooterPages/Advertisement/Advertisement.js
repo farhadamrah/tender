@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.scss';
+import './Advertisement.scss';
 import Form from 'antd/lib/form/Form';
 import { Input, Button } from 'antd';
 
