@@ -16,7 +16,7 @@ const Footer = () => {
               <Link to='/contact'>Bizimlə əlaqə</Link>
             </li>
             <li className='list__item'>
-              <Link to='/advertisement'>Saytda reklam</Link>
+              <Link to='/'>Saytda reklam</Link>
             </li>
           </ul>
           <span>info@tender.az</span>
