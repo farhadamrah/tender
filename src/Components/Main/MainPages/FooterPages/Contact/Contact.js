@@ -1,9 +1,9 @@
-import Form from 'antd/lib/form/Form';
 import React from 'react';
-import './ContactUs.scss';
+import './Contact.scss';
+import Form from 'antd/lib/form/Form';
 import { Input, Button } from 'antd';
 
-const ContactUs = () => {
+const Contact = () => {
   const message = 'Zəhmət olmazsa, məlumatı daxil edin';
 
   return (
@@ -71,4 +71,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;
