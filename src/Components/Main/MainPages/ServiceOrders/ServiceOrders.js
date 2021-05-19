@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ServiceOrders.scss';
 import '../../Main.scss';
 import {
@@ -37,9 +38,11 @@ const ServiceOrders = () => {
                 <FontAwesomeIcon icon={faMoneyBill} className='price__icon' />
                 <span className='price__text'>{`${data.price} AZN`}</span>
               </div>
-              <button type='button' className='tender__details-btn'>
-                Ətraflı
-              </button>
+              <Link to='/service-orders/about-service_orders'>
+                <button type='button' className='tender__details-btn'>
+                  Ətraflı
+                </button>
+              </Link>
             </div>
 
             <div className='tender__footer'>

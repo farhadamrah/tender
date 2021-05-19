@@ -12,8 +12,10 @@ import Store from './MainPages/Store/Store';
 import HomePage from './MainPages/HomePage/HomePage';
 import Blog from './MainPages/Blog/Blog';
 import Instruction from './MainPages/Instruction/Instruction';
-import './Main.scss';
 import Profile from './MainPages/Profile/Profile';
+import Contact from './MainPages/FooterPages/Contact/Contact';
+import './Main.scss';
+import AboutServiceOrders from './MainPages/ServiceOrders/About-ServiceOrders/About-ServiceOrders';
 
 const Main = () => {
   return (
@@ -27,12 +29,17 @@ const Main = () => {
             <Route path='/rules' component={Rules} />
             <Route path='/profile' component={Profile} />
             <Route path='/add-order' component={AddOrder} />
-            <Route path='/service-orders' component={ServiceOrders} />
+            <Route exact path='/service-orders' component={ServiceOrders} />
             <Route path='/produce-orders' component={ProduceOrders} />
             <Route path='/companies' component={Companies} />
             <Route path='/store' component={Store} />
             <Route path='/blog' component={Blog} />
             <Route path='/instruction' component={Instruction} />
+            <Route path='/contact' component={Contact} />
+            <Route
+              path='/service-orders/about-service_orders'
+              component={AboutServiceOrders}
+            />
             <Route path='/' component={HomePage} />
           </Switch>
         </section>

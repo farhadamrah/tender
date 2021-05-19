@@ -89,6 +89,39 @@
     font-size: 0.9rem;
     font-weight: 600;
     color: #545c6a;
+
+    .radio-btn {
+      width: 6.5rem;
+      height: 2.3rem;
+      padding-bottom: 0.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.08rem;
+      font-weight: 600;
+      background-color: #e9e7f7;
+      color: rgb(77, 77, 77);
+      border-radius: 0.5rem;
+      transform: scale(1.07);
+      border: 1px solid rgba(116, 116, 116, 0.74);
+      // letter-spacing: 0.03rem;
+      // margin: 0.15rem;
+      transition: all 0.3s ease-in-out;
+
+      .ant-radio {
+        display: none;
+      }
+    }
+
+    .selected-btn {
+      background-color: #0011ff;
+      color: white;
+      transform: scale(1.01);
+      border: 3px solid rgba(20, 7, 136, 0.712);
+      font-size: 1rem;
+      font-weight: 600;
+      // letter-spacing: 0.03rem;
+    }
   }
 
   // .radio-container {

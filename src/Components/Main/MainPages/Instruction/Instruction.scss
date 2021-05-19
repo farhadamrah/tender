@@ -8,19 +8,28 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: rgb(43, 43, 43);
+    color: rgb(64, 64, 65);
   }
 
   .ant-collapse {
     border-radius: 0.4rem;
+    margin-top: 0;
+
+    .ant-collapse-header {
+      background-color: white;
+      color: rgb(62, 64, 66) !important;
+    }
+
     // background: none;
 
     // .ant-collapse-item {
     //   background: white;
     // }
+
     // .ant-collapse-item-active {
     //   margin-bottom: 0.1rem;
     // }
+
     .ant-collapse-content-box {
       display: flex;
       justify-content: center;
