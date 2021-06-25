@@ -1,5 +1,6 @@
 const TenderData = [
   {
+    key: 1,
     title: 'Buta Grup',
     // image: '',
     header: 'Buta Grup Veb saytın yaradılması üçün tender elan edir',
@@ -14,6 +15,7 @@ const TenderData = [
     order: 0,
   },
   {
+    key: 2,
     title: 'Buta Grup',
     // image: '',
     header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
@@ -28,6 +30,7 @@ const TenderData = [
     order: 0,
   },
   {
+    key: 3,
     title: 'Buta Grup',
     // image: '',
     header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
@@ -42,6 +45,7 @@ const TenderData = [
     order: 0,
   },
   {
+    key: 4,
     title: 'Buta Grup',
     // image: '',
     header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
@@ -56,6 +60,7 @@ const TenderData = [
     order: 0,
   },
   {
+    key: 5,
     title: 'Buta Grup',
     // image: '',
     header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',

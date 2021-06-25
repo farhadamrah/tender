@@ -21,7 +21,7 @@ const ServiceOrders = () => {
       <SearchBar />
       <div className='tender-container'>
         {TenderData.map((data) => (
-          <div className='tender'>
+          <div className='tender' key={data.key}>
             <div className='tender__content'>
               <h1 className='tender__title'>{data.title}</h1>
               <FontAwesomeIcon icon={faUserCircle} className='tender__image' />

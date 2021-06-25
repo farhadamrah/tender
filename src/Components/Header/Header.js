@@ -47,7 +47,7 @@ const Header = () => {
               </Link>
             </li>
             <li className='main-navbar__item'>
-              <Link>
+              <Link to='#'>
                 <FontAwesomeIcon icon={faGlobe} />
               </Link>
             </li>
