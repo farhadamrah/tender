@@ -10,19 +10,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Filter from '../../Filter/Filter';
 import SearchBar from '../../SearchBar/SearchBar';
 import ProduceOrdersData from './ProduceOrdersData';
-
+import ServiceOrders from '../ServiceOrders/ServiceOrders';
 const ProduceOrders = () => {
   return (
     <>
-      <Filter />
-      <SearchBar />
-      <div className='produce-container'>
+      {/* <Filter />
+      <SearchBar /> */}
+      {/* <div className='produce-container'>
         {ProduceOrdersData.map((data) => (
           <div className='produce'>
             <div className='produce__content'>
               <h1 className='produce__title'>{data.title}</h1>
               <FontAwesomeIcon icon={faUserCircle} className='produce__image' />
-              {/* <img src={'produce image'} alt="" /> */}
               <p className='produce__feedbacks'>
                 <span className='green'>{data.feedbacks.green}</span>
                 <span>|</span>
@@ -55,7 +54,8 @@ const ProduceOrders = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
+      <ServiceOrders />
     </>
   );
 };
