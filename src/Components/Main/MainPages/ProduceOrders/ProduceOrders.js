@@ -9,27 +9,35 @@ import {
 } from 'react-router-dom';
 import {
   faUserCircle,
+  faMoneyBill,
   faClock,
   faCalendarAlt,
   faComment,
+  faEye,
+  faBriefcase,
+  faComments,
+  faPlaceOfWorship,
+  faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Filter from '../../Filter/Filter';
 import SearchBar from '../../SearchBar/SearchBar';
 import ProduceOrdersData from './ProduceOrdersData';
+import OrdersImagesCarousel from '../OrdersCarousel/OrdersImagesCarousel';
 
 const ProduceOrders = () => {
   const { url, path } = useRouteMatch();
 
-const ProduceOrder = () => {
-  const { produceId } = useParams();
-  const produceData =
-    data || ProduceOrdersData[ProduceOrdersData.findIndex((i) => i.id === +produceId)];
-  return data ? (
-    <>
-      <Filter />
-      <SearchBar />
-      <div className='produce-container'>
+  const ProduceOrder = ({ data }) => {
+    const { produceId } = useParams();
+    const produceData =
+      data ||
+      ProduceOrdersData[
+        ProduceOrdersData.findIndex((i) => i.id === +produceId)
+      ];
+    return data ? (
+      <>
+        <div className='produce-container' key={`produce-${produceData.id}`}>
           <div className='produce'>
             <div className='produce__content'>
               <h1 className='produce__title'>{produceData.title}</h1>
@@ -42,11 +50,12 @@ const ProduceOrder = () => {
                 <span className='blue'>{produceData.feedbacks.blue}</span>
               </p>
               <h1 className='produce__header'>{produceData.header}</h1>
-              <button type='button' className='produce__details-btn'>
-                Ətraflı
-              </button>
+              <Link to={`${url}/${produceData.id}`}>
+                <button type='button' className='produce__details-btn'>
+                  Ətraflı
+                </button>
+              </Link>
             </div>
-
             <div className='produce__footer'>
               <div className='produce__time footer-item'>
                 <FontAwesomeIcon icon={faClock} className='footer__icon' />
@@ -65,11 +74,11 @@ const ProduceOrder = () => {
               </div>
             </div>
           </div>
-      </div>
-    </>
-  ) : (
-    <>
-     <div className='service-order container' key={orderData.id}>
+        </div>
+      </>
+    ) : (
+      <>
+        <div className='service-order container' key={produceData.id}>
           <div
             className='service-order__content'
             style={{ padding: '1rem 1.3rem 0.5rem' }}
@@ -82,70 +91,70 @@ const ProduceOrder = () => {
                 />
               </div>
               <div className='service-order__header--texts'>
-                <h4 className='texts__title'>Sifarişçi</h4>
+                <h4 className='texts__title'>{produceData.title}</h4>
                 <p className='texts__registrationDate'>
-                  Saytda qeydiyyatdan keçib 29 gün
+                  Saytda qeydiyyatdan keçib: {produceData.registrationDate} gün
                 </p>
                 <p className='texts__feedbacks'>
                   <span>İcraçıların rəyləri: </span>
-                  <span className='green'>{orderData.feedbacks.green}</span>
+                  <span className='green'>{produceData.feedbacks.green}</span>
                   <span>|</span>
-                  <span className='red'>{orderData.feedbacks.red}</span>
+                  <span className='red'>{produceData.feedbacks.red}</span>
                   <span>|</span>
-                  <span className='blue'>{orderData.feedbacks.blue}</span>
+                  <span className='blue'>{produceData.feedbacks.blue}</span>
                 </p>
               </div>
             </div>
             <div className='service-order__body'>
               <h1 className='service-order__body--title'>
-                Şirkətin işçiləri üçün uniforma və sair promo məhsullarının
-                istehsalı üçün tender elan olunur
-                {/* {data.title} */}
+                {produceData.header}
               </h1>
               <span className='service-order__body--price'>
                 <FontAwesomeIcon
                   icon={faMoneyBill}
                   style={{ marginRight: '0.5rem' }}
                 />
-                0 AZN
+                {`${produceData.price} AZN`}
               </span>
               <p className='service-order__body--deadLine'>
                 <FontAwesomeIcon
                   icon={faCalendarAlt}
                   style={{ marginRight: '0.2rem', fontSize: '1rem' }}
                 />
-                Təkliflər 09.06.2021 tarixinə dək qəbul edlir
+                Təkliflər {produceData.deadLine} tarixinədək qəbul edlir
               </p>
               <p className='service-order__body--article'>
-                Berlin MP mağazaları şəbəkəsinin işçilərinin gündəlik iş
-                geyimlərinin tikilməsi və sair promo işləri üçün tender elan
-                olunur.
+                {produceData.about}
               </p>
+              <OrdersImagesCarousel />
             </div>
           </div>
 
           <div className='service-order__footer'>
             <div>
               <div className='order__type footer-item'>
-                <FontAwesomeIcon icon={faBriefcase} className='footer__icon' />
-                <span className='footer__text'>{`Birdəfəlik sifariş`}</span>
+                <FontAwesomeIcon
+                  icon={faMapMarkerAlt}
+                  className='footer__icon'
+                />
+                <span className='footer__text'>{produceData.location}</span>
               </div>
               <div className='order__time footer-item'>
                 <FontAwesomeIcon icon={faClock} className='footer__icon' />
-                <span className='footer__text'>{`26.05.2021 в 14:14`}</span>
+                <span className='footer__text'>{produceData.addedDate}</span>
               </div>
             </div>
             <div>
               <div className='order__offer footer-item'>
                 <FontAwesomeIcon icon={faEye} className='footer__icon' />
-                <span className='footer__text'>{`Cəmi baxış: 311`}</span>
+                <span className='footer__text'>{`Cəmi baxış: ${produceData.views}`}</span>
               </div>
               <div className='order__date footer-item'>
                 <FontAwesomeIcon
                   icon={faCalendarAlt}
                   className='footer__icon'
                 />
-                <span className='footer__text '>{`09.06.2021-dək`}</span>
+                <span className='footer__text '>{`${produceData.deadLine}-dək`}</span>
               </div>
             </div>
           </div>
@@ -154,15 +163,35 @@ const ProduceOrder = () => {
         <div className='suggestions'>
           <h2 className='suggestions__header'>
             <FontAwesomeIcon icon={faComments} />
-            İcraçıların təklifləri <span>{`2`}</span>
+            İcraçıların təklifləri <span>{produceData.order}</span>
           </h2>
           <div className='container'>
-            Cəmi 2 təklif. Təkliflər haqqında məlumat almaq üçün qeydiyyatdan
-            keçin və ya daxil olun
+            Cəmi {produceData.order} təklif. Təkliflər haqqında məlumat almaq
+            üçün qeydiyyatdan keçin və ya daxil olun
           </div>
         </div>
+      </>
+    );
+  };
+
+  return (
+    <>
+      <div className='tender-container'>
+        <Switch>
+          <Route path={`${path}/:produceId`} exact>
+            <ProduceOrder />
+          </Route>
+          <Route path={path}>
+            <Filter />
+            <SearchBar />
+            {ProduceOrdersData.map((data) => (
+              <ProduceOrder data={data} />
+            ))}
+          </Route>
+        </Switch>
+      </div>
     </>
-  )
+  );
 };
 
 export default ProduceOrders;
