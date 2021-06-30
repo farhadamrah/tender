@@ -15,9 +15,9 @@ const Store = () => {
 
   return (
     <>
-      <Filter />
-      <SearchBar />
       <div className='store-container'>
+        <Filter />
+        <SearchBar />
         <div className='store-container__list'>
           <h1 className='list-header__title'>TenderWorld saytında məhsullar</h1>
           <p>{'672'} məhsul arasından Sizə lazım olanı seçin</p>
@@ -31,7 +31,7 @@ const Store = () => {
           </ul>
         </div>
 
-        <div className='filter-container'>
+        <div className='itemsFilter-container'>
           <p className='product-count'>{`${'671'} mal`}</p>
           <Select placeholder='Sırala' onSelect={handleChange} allowClear>
             <Option value='date_desc'>Tarixə görə</Option>

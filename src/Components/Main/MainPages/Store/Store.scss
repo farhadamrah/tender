@@ -4,6 +4,16 @@
   flex-direction: column;
   align-items: center;
 
+  .filter-container {
+    width: 100%;
+  }
+  .filter-container .ant-collapse {
+    margin-bottom: 1.5rem;
+  }
+  .horizontal-line {
+    margin-bottom: 1.5rem;
+  }
+
   .store-container__list {
     background-color: white;
     padding: 1.5rem 1.2rem;
@@ -50,7 +60,7 @@
     }
   }
 
-  .filter-container {
+  .itemsFilter-container {
     width: 100%;
     display: flex;
     justify-content: space-between;

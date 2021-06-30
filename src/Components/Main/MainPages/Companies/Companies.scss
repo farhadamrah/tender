@@ -3,6 +3,16 @@
   flex-direction: column;
   align-items: center;
 
+  .filter-container {
+    width: 100%;
+  }
+  .filter-container .ant-collapse {
+    margin-bottom: 1.5rem;
+  }
+  .horizontal-line {
+    margin-bottom: 1.5rem;
+  }
+
   .services-list-container {
     background: white;
     width: 100%;
@@ -35,21 +45,26 @@
 
       li {
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0.2rem 0.5rem;
         font-weight: bold;
         color: #303030;
-
+        p {
+          margin: 0;
+        }
         span {
           background-color: #f7f7f7;
           color: #838383;
           width: 2.5rem;
           text-align: center;
+          align-self: center;
           border-radius: 0.2rem;
           font-weight: 600;
           font-size: 0.8rem;
+          padding: 0.2rem;
         }
       }
     }
