@@ -81,7 +81,7 @@ const Store = () => {
           key={storeData.id}
           style={{ marginTop: '6rem' }}
         >
-          test
+          {storeData.title}
         </div>
       </>
     );
