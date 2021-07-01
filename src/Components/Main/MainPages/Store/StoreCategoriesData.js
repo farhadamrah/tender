@@ -86,6 +86,7 @@ const listData = [
 
 const productData = [
   {
+    id: 1,
     image: img1,
     title: 'Mebel',
     cost: 60,
@@ -94,6 +95,7 @@ const productData = [
     comment: 0,
   },
   {
+    id: 2,
     image: img2,
     title: 'Domofon',
     cost: 200,
@@ -102,6 +104,7 @@ const productData = [
     comment: 1,
   },
   {
+    id: 3,
     image: img2,
     title: 'Domofon',
     cost: 200,
@@ -110,6 +113,7 @@ const productData = [
     comment: 1,
   },
   {
+    id: 4,
     image: img1,
     title: 'Mebel',
     cost: 60,

@@ -6,8 +6,6 @@ import {
   Route,
   useParams,
 } from 'react-router-dom';
-import './ServiceOrders.scss';
-import '../../Main.scss';
 import {
   faUserCircle,
   faMoneyBill,
@@ -15,16 +13,16 @@ import {
   faCalendarAlt,
   faComment,
   faEye,
-  faBriefcase,
   faComments,
   faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons';
-import { List, Typography } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ServiceOrdersData from './ServiceOrdersData';
 import Filter from '../../Filter/Filter';
 import SearchBar from '../../SearchBar/SearchBar';
 import OrdersImagesCarousel from '../OrdersCarousel/OrdersImagesCarousel';
+import './ServiceOrders.scss';
+import '../../Main.scss';
 
 const ServiceOrders = () => {
   const { url, path } = useRouteMatch();

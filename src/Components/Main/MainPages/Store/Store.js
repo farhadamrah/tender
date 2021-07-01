@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  Link,
+  Switch,
+  Route,
+  useParams,
+  useRouteMatch,
+} from 'react-router-dom';
 import SearchBar from '../../SearchBar/SearchBar';
 import Filter from '../../Filter/Filter';
 import './Store.scss';
@@ -8,13 +15,17 @@ import { Select, Rate } from 'antd';
 
 const Store = () => {
   const { Option } = Select;
+  const { url, path } = useRouteMatch();
 
   const handleChange = (value) => {
     console.log(`selected ${value}`);
   };
 
-  return (
-    <>
+  const StoreItem = ({ data }) => {
+    const { productId } = useParams();
+    const storeData =
+      data || productData[productData.findIndex((i) => i.id === +productId)];
+    return data ? (
       <div className='store-container'>
         <Filter />
         <SearchBar />
@@ -42,26 +53,55 @@ const Store = () => {
           </Select>
         </div>
 
-        <div className='product-boxes'>
-          {productData.map((product) => (
-            <div className='product-box'>
-              <div className='image-container'>
-                <img src={product.image} alt='mebel' />
-              </div>
-              <div className='content'>
-                <div className='content__label'>
-                  <span className='product-title'>{product.title}</span>
-                  <span className='product-cost'>{`${product.cost} AZN`}</span>
-                </div>
-                <div className='rating'>
-                  <Rate defaultValue={product.rating} />
-                </div>
-                <span className='product-comments'>{`${product.comment} rəy`}</span>
-                <span className='product-location'>{product.location}</span>
-              </div>
+        <div className='product-boxes' key={storeData.id}>
+          {/* {productData.map((product) => ( */}
+          <div className='product-box'>
+            <div className='image-container'>
+              <img src={storeData.image} alt='mebel' />
             </div>
-          ))}
+            <div className='content'>
+              <div className='content__label'>
+                <span className='product-title'>{storeData.title}</span>
+                <span className='product-cost'>{`${storeData.cost} AZN`}</span>
+              </div>
+              <div className='rating'>
+                <Rate defaultValue={storeData.rating} />
+              </div>
+              <span className='product-comments'>{`${storeData.comment} rəy`}</span>
+              <span className='product-location'>{storeData.location}</span>
+            </div>
+          </div>
+          {/* ))} */}
         </div>
+      </div>
+    ) : (
+      <>
+        <div
+          className='container'
+          key={storeData.id}
+          style={{ marginTop: '6rem' }}
+        >
+          test
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <>
+      <div className='tender-container'>
+        <Switch>
+          <Route path={`${path}/:productId`} exact>
+            <StoreItem />
+          </Route>
+          <Route path={path}>
+            <Filter />
+            <SearchBar />
+            {productData.map((data) => (
+              <Store data={data} />
+            ))}
+          </Route>
+        </Switch>
       </div>
     </>
   );
