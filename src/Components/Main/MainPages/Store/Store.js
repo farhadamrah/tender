@@ -9,25 +9,27 @@ import {
 import SearchBar from '../../SearchBar/SearchBar';
 import Filter from '../../Filter/Filter';
 import './Store.scss';
-import { listData, productData } from './StoreCategoriesData';
+// import { listData, productData } from './StoreCategoriesData';
 import { Select, Rate } from 'antd';
 // import 'antd/dist/antd.css';
+import productData from './StoreCategoriesData';
 
 const Store = () => {
-  const { Option } = Select;
+  // const { Option } = Select;
   const { url, path } = useRouteMatch();
 
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-  };
+  // const handleChange = (value) => {
+  //   console.log(`selected ${value}`);
+  // };
 
   const StoreItem = ({ data }) => {
     const { productId } = useParams();
     const storeData =
       data || productData[productData.findIndex((i) => i.id === +productId)];
     return data ? (
-      <div className='store-container'>
-        <Filter />
+      <>
+        {/* <div className='store-container'> */}
+        {/* <Filter />
         <SearchBar />
         <div className='store-container__list'>
           <h1 className='list-header__title'>TenderWorld saytında məhsullar</h1>
@@ -40,9 +42,8 @@ const Store = () => {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className='itemsFilter-container'>
+        </div> */}
+        {/* <div className='itemsFilter-container'>
           <p className='product-count'>{`${'671'} mal`}</p>
           <Select placeholder='Sırala' onSelect={handleChange} allowClear>
             <Option value='date_desc'>Tarixə görə</Option>
@@ -51,11 +52,11 @@ const Store = () => {
             <Option value='rating_asc'>Artan reytinq</Option>
             <Option value='rating_desc'>Azalan reytinq</Option>
           </Select>
-        </div>
-
-        <div className='product-boxes' key={storeData.id}>
-          {/* {productData.map((product) => ( */}
-          <div className='product-box'>
+        </div> */}
+        {/* <div className='product-boxes'> */}
+        {/* {productData.map((product) => ( */}
+        <Link to={`${url}/${productData.id}`}>
+          <div className='product-box' key={storeData.id}>
             <div className='image-container'>
               <img src={storeData.image} alt='mebel' />
             </div>
@@ -71,17 +72,27 @@ const Store = () => {
               <span className='product-location'>{storeData.location}</span>
             </div>
           </div>
-          {/* ))} */}
-        </div>
-      </div>
+        </Link>
+        // {/* </div> */}
+        {/* </div> */}
+      </>
     ) : (
       <>
-        <div
-          className='container'
-          key={storeData.id}
-          style={{ marginTop: '6rem' }}
-        >
-          {storeData.title}
+        <div className='product-box' key={storeData.id}>
+          <div className='image-container'>
+            <img src={storeData.image} alt='mebel' />
+          </div>
+          <div className='content'>
+            <div className='content__label'>
+              <span className='product-title'>{storeData.title}</span>
+              <span className='product-cost'>{`${storeData.cost} AZN`}</span>
+            </div>
+            <div className='rating'>
+              <Rate defaultValue={storeData.rating} />
+            </div>
+            <span className='product-comments'>{`${storeData.comment} rəy`}</span>
+            <span className='product-location'>{storeData.location}</span>
+          </div>
         </div>
       </>
     );
@@ -89,7 +100,7 @@ const Store = () => {
 
   return (
     <>
-      <div className='tender-container'>
+      <div className='store-container'>
         <Switch>
           <Route path={`${path}/:productId`} exact>
             <StoreItem />
