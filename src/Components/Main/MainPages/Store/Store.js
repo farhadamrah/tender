@@ -1,35 +1,25 @@
 import React from 'react';
-import {
-  Link,
-  Switch,
-  Route,
-  useParams,
-  useRouteMatch,
-} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import SearchBar from '../../SearchBar/SearchBar';
 import Filter from '../../Filter/Filter';
 import './Store.scss';
-// import { listData, productData } from './StoreCategoriesData';
-import { Select, Rate } from 'antd';
+import { Select } from 'antd';
 // import 'antd/dist/antd.css';
-import productData from './StoreCategoriesData';
+import { productData, listData } from './StoreCategoriesData';
+import Products from './Products/Products';
+import FullProduct from './FullProduct/FullProduct';
 
 const Store = () => {
-  // const { Option } = Select;
-  const { url, path } = useRouteMatch();
+  const { Option } = Select;
 
-  // const handleChange = (value) => {
-  //   console.log(`selected ${value}`);
-  // };
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+  };
 
-  const StoreItem = ({ data }) => {
-    const { productId } = useParams();
-    const storeData =
-      data || productData[productData.findIndex((i) => i.id === +productId)];
-    return data ? (
-      <>
-        {/* <div className='store-container'> */}
-        {/* <Filter />
+  return (
+    <>
+      <div className='store-container'>
+        <Filter />
         <SearchBar />
         <div className='store-container__list'>
           <h1 className='list-header__title'>TenderWorld saytında məhsullar</h1>
@@ -42,8 +32,8 @@ const Store = () => {
               </li>
             ))}
           </ul>
-        </div> */}
-        {/* <div className='itemsFilter-container'>
+        </div>
+        <div className='itemsFilter-container'>
           <p className='product-count'>{`${'671'} mal`}</p>
           <Select placeholder='Sırala' onSelect={handleChange} allowClear>
             <Option value='date_desc'>Tarixə görə</Option>
@@ -52,65 +42,14 @@ const Store = () => {
             <Option value='rating_asc'>Artan reytinq</Option>
             <Option value='rating_desc'>Azalan reytinq</Option>
           </Select>
-        </div> */}
-        {/* <div className='product-boxes'> */}
-        {/* {productData.map((product) => ( */}
-        <Link to={`${url}/${productData.id}`}>
-          <div className='product-box' key={storeData.id}>
-            <div className='image-container'>
-              <img src={storeData.image} alt='mebel' />
-            </div>
-            <div className='content'>
-              <div className='content__label'>
-                <span className='product-title'>{storeData.title}</span>
-                <span className='product-cost'>{`${storeData.cost} AZN`}</span>
-              </div>
-              <div className='rating'>
-                <Rate defaultValue={storeData.rating} />
-              </div>
-              <span className='product-comments'>{`${storeData.comment} rəy`}</span>
-              <span className='product-location'>{storeData.location}</span>
-            </div>
-          </div>
-        </Link>
-        // {/* </div> */}
-        {/* </div> */}
-      </>
-    ) : (
-      <>
-        <div className='product-box' key={storeData.id}>
-          <div className='image-container'>
-            <img src={storeData.image} alt='mebel' />
-          </div>
-          <div className='content'>
-            <div className='content__label'>
-              <span className='product-title'>{storeData.title}</span>
-              <span className='product-cost'>{`${storeData.cost} AZN`}</span>
-            </div>
-            <div className='rating'>
-              <Rate defaultValue={storeData.rating} />
-            </div>
-            <span className='product-comments'>{`${storeData.comment} rəy`}</span>
-            <span className='product-location'>{storeData.location}</span>
-          </div>
         </div>
-      </>
-    );
-  };
 
-  return (
-    <>
-      <div className='store-container'>
         <Switch>
-          <Route path={`${path}/:productId`} exact>
-            <StoreItem />
+          <Route exact path='/store/products'>
+            <Products productData={productData} />
           </Route>
-          <Route path={path}>
-            <Filter />
-            <SearchBar />
-            {productData.map((data) => (
-              <Store data={data} />
-            ))}
+          <Route path='/store/products/:id'>
+            <FullProduct productData={productData} />
           </Route>
         </Switch>
       </div>
