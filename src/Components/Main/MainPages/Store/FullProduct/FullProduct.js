@@ -1,25 +1,28 @@
 import React from 'react';
 import './FullProduct.scss';
+import { useParams } from 'react-router-dom';
 
 import { Rate } from 'antd';
 
 const FullProduct = ({ productData }) => {
+  const { id } = useParams();
+
   return (
     <div>
-      <div className='product-box' key={'storeData.id'}>
+      <div className='product-box' key={productData.index}>
         <div className='image-container'>
-          <img src={'storeData.image'} alt='mebel' />
+          <img src={productData.image} alt='mebel' />
         </div>
         <div className='content'>
           <div className='content__label'>
-            <span className='product-title'>{'storeData.title'}</span>
-            <span className='product-cost'>{`${'storeData.cost'} AZN`}</span>
+            <span className='product-title'>{productData.title}</span>
+            <span className='product-cost'>{`${productData.cost} AZN`}</span>
           </div>
           <div className='rating'>
-            <Rate defaultValue={'storeData.rating'} />
+            <Rate defaultValue={productData.rating} />
           </div>
-          <span className='product-comments'>{`${'storeData.comment'} rəy`}</span>
-          <span className='product-location'>{'storeData.location'}</span>
+          <span className='product-comments'>{`${productData.comment} rəy`}</span>
+          <span className='product-location'>{productData.location}</span>
         </div>
       </div>
     </div>
