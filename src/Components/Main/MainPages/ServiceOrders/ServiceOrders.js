@@ -125,7 +125,11 @@ const ServiceOrders = () => {
               <p className='service-order__body--article'>
                 {serviceData.about}
               </p>
-              <OrdersImagesCarousel />
+              <OrdersImagesCarousel>
+                {serviceData.images.map((img) => (
+                  <img src={img} alt='image' />
+                ))}
+              </OrdersImagesCarousel>
               <h2>Əlaqə məlumatları</h2>
               <div className='service-order__body--contact'>
                 <div className='service-order__body--contact__left'>

@@ -1,0 +1,109 @@
+.fullProduct {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: rgb(61, 61, 61);
+    }
+
+    &--cost {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__rating {
+    margin-bottom: 1rem;
+  }
+
+  &__comments,
+  &__location,
+  &__view {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    svg {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__comments {
+    display: flex;
+    align-items: center;
+
+    .label {
+      margin-right: 0.6rem;
+    }
+    .green {
+      color: darkgreen;
+    }
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+    .line {
+      margin: 0.3rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__view {
+    margin-bottom: 1rem;
+  }
+
+  &__seller {
+    color: rgb(22, 62, 241);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+
+    .order {
+      background-color: rgb(15, 189, 15);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .complain {
+      background-color: rgb(255, 38, 0);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .wishlist {
+      background-color: rgb(49, 11, 219);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}

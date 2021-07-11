@@ -1,3 +1,7 @@
+import img1 from '../../../../assets/images/Carousel/carousel_photo-1.jpg';
+import img2 from '../../../../assets/images/Carousel/carousel_photo-2.jpg';
+import img3 from '../../../../assets/images/Carousel/carousel_photo-3.jpg';
+
 const ServiceData = [
   {
     id: 1,
@@ -6,6 +10,7 @@ const ServiceData = [
     header: 'Ev tikintisi üzrə tender elan olunur!!',
     about:
       'Kürsülü evdir Kürsü hazırdır qalıq hissəsi tikilməli. Tam təmir olunmaqı 11/30un-10a colden cole temir kursuden yuxari bütün təmir işləri olacaq .Ətrafli məlumat üçün əlaqə saxlayın.',
+    images: [img1, img2, img3],
     feedbacks: {
       green: 0,
       red: 0,
@@ -31,6 +36,11 @@ const ServiceData = [
     header: 'Şəbəkə qurulmalıdır',
     about:
       'Anbar proqramının işələməsi üçün 3 kompüter arasında şəbəkə qurulmalıdır. Kompüterlərin 2-si Nərimanov rayonunda ofisdədir digəri isə 28 may ərazisində mağazada. Zəhmət olmasa qiymət təkliflərinizi yazın.',
+    images: {
+      img1,
+      img2,
+      img3,
+    },
     feedbacks: {
       green: 0,
       red: 1,
@@ -55,6 +65,11 @@ const ServiceData = [
     // image: '',
     header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
     about: 'test',
+    images: {
+      img1,
+      img2,
+      img3,
+    },
     feedbacks: {
       green: 0,
       red: 0,

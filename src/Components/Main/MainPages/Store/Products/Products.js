@@ -11,7 +11,7 @@ const Products = ({ productData }) => {
           <Link to={`/store/${product.id}`}>
             <div className='product-box' key={index}>
               <div className='image-container'>
-                <img src={product.image} alt='mebel' />
+                <img src={product.images[0]} alt='mebel' />
               </div>
               <div className='content'>
                 <div className='content__label'>

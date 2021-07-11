@@ -1,8 +1,17 @@
 import React from 'react';
-import './FullProduct.scss';
-import { useParams } from 'react-router-dom';
-
+import { useParams, Link } from 'react-router-dom';
 import { Rate } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faComments,
+  faExclamationTriangle,
+  faEye,
+  faHeart,
+  faMapMarkerAlt,
+  faShoppingCart,
+} from '@fortawesome/free-solid-svg-icons';
+import OrdersImagesCarousel from '../../OrdersCarousel/OrdersImagesCarousel';
+import './FullProduct.scss';
 
 const FullProduct = ({ productData }) => {
   const { id } = useParams();
@@ -10,22 +19,52 @@ const FullProduct = ({ productData }) => {
   return (
     <>
       {productData
-        .filter((product) => product.id === parseInt(id))
+        .filter((product) => product.id === Number(id))
         .map((product, index) => (
-          <div className='product-box' key={index}>
-            <div className='image-container'>
-              <img src={product.image} alt='mebel' />
+          <div className='fullProduct' key={index}>
+            <OrdersImagesCarousel className='fullProduct__carousel'>
+              {product.images.map((img) => (
+                <img src={img} alt='product-img' />
+              ))}
+            </OrdersImagesCarousel>
+            <div className='fullProduct__row'>
+              <span className='fullProduct__row--title'>{product.title}</span>
+              <span className='fullProduct__row--cost'>{`${product.cost} AZN`}</span>
             </div>
-            <div className='content'>
-              <div className='content__label'>
-                <span className='product-title'>{product.title}</span>
-                <span className='product-cost'>{`${product.cost} AZN`}</span>
+            <div className='fullProduct__rating'>
+              <Rate defaultValue={product.rating} />
+            </div>
+            <span className='fullProduct__location'>
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              {product.location}
+            </span>
+            <span className='fullProduct__comments'>
+              <FontAwesomeIcon icon={faComments} />
+              <span className='label'>Rəylər: </span>
+              <span className='green'>+{product.feedbacks.green}</span>
+              <span className='line'>|</span>
+              <span className='blue'>{product.feedbacks.blue}</span>
+              <span className='line'>|</span>
+              <span className='red'>-{product.feedbacks.red}</span>
+            </span>
+            <span className='fullProduct__view'>
+              <FontAwesomeIcon icon={faEye} />
+              {`Cəmi baxış: ${product.view}`}
+            </span>
+            <Link to='#' className='fullProduct__seller'>
+              Satıcının başqa məhsullarına bax
+            </Link>
+            <div className='fullProduct__btns'>
+              <div className='order'>
+                <FontAwesomeIcon icon={faShoppingCart} />
+                Sifariş et
               </div>
-              <div className='rating'>
-                <Rate defaultValue={product.rating} />
+              <div className='complain'>
+                <FontAwesomeIcon icon={faExclamationTriangle} />
               </div>
-              <span className='product-comments'>{`${product.comment} rəy`}</span>
-              <span className='product-location'>{product.location}</span>
+              <div className='wishlist'>
+                <FontAwesomeIcon icon={faHeart} />
+              </div>
             </div>
           </div>
         ))}
