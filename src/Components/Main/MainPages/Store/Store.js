@@ -43,16 +43,15 @@ const Store = () => {
             <Option value='rating_desc'>Azalan reytinq</Option>
           </Select>
         </div>
-
-        <Switch>
-          <Route exact path='/store/products'>
-            <Products productData={productData} />
-          </Route>
-          <Route path='/store/products/:id'>
-            <FullProduct productData={productData} />
-          </Route>
-        </Switch>
       </div>
+      <Switch>
+        <Route exact path='/store'>
+          <Products productData={productData} />
+        </Route>
+        <Route path='/store/:id'>
+          <FullProduct productData={productData} />
+        </Route>
+      </Switch>
     </>
   );
 };

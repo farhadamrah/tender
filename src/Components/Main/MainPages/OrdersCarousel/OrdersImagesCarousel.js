@@ -6,7 +6,7 @@ import img1 from '../../../../assets/images/Carousel/carousel_photo-1.jpg';
 import img2 from '../../../../assets/images/Carousel/carousel_photo-2.jpg';
 import img3 from '../../../../assets/images/Carousel/carousel_photo-3.jpg';
 
-const OrdersImagesCarousel = () => {
+const OrdersImagesCarousel = (data) => {
   return (
     <Carousel>
       <div>

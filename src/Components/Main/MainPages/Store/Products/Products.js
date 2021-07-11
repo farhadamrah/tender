@@ -6,10 +6,10 @@ import { Rate } from 'antd';
 const Products = ({ productData }) => {
   return (
     <>
-      {productData.map((product, index) => (
-        <div className='product-boxes'>
-          <Link to={`/store/products/${productData.id}`}>
-            <div className='product-box' key={product.index}>
+      <div className='product-boxes'>
+        {productData.map((product, index) => (
+          <Link to={`/store/${product.id}`}>
+            <div className='product-box' key={index}>
               <div className='image-container'>
                 <img src={product.image} alt='mebel' />
               </div>
@@ -26,8 +26,8 @@ const Products = ({ productData }) => {
               </div>
             </div>
           </Link>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };

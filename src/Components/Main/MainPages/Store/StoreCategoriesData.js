@@ -123,4 +123,4 @@ const productData = [
   },
 ];
 
-export { listData, productData };
+export { productData, listData };
