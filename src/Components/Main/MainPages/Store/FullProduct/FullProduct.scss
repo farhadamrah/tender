@@ -27,14 +27,22 @@
     margin-bottom: 1rem;
   }
 
+  &__article {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+  }
+
+  &__contact,
   &__comments,
   &__location,
   &__view {
     font-size: 1.1rem;
     font-weight: 500;
+    height: 2rem;
 
     svg {
-      font-size: 1.2rem;
+      width: 1.2rem;
       margin-right: 0.5rem;
     }
   }

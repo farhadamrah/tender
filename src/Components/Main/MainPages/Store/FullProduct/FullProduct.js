@@ -8,6 +8,7 @@ import {
   faEye,
   faHeart,
   faMapMarkerAlt,
+  faPhone,
   faShoppingCart,
 } from '@fortawesome/free-solid-svg-icons';
 import OrdersImagesCarousel from '../../OrdersCarousel/OrdersImagesCarousel';
@@ -34,6 +35,10 @@ const FullProduct = ({ productData }) => {
             <div className='fullProduct__rating'>
               <Rate defaultValue={product.rating} />
             </div>
+            <p className='fullProduct__article'>{product.article}</p>
+            <span className='fullProduct__contact'>
+              <FontAwesomeIcon icon={faPhone} /> {product.contact}
+            </span>
             <span className='fullProduct__location'>
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               {product.location}

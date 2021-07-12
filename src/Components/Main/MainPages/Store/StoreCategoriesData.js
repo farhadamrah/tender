@@ -91,6 +91,9 @@ const productData = [
     title: 'Mebel',
     cost: 60,
     rating: 4,
+    article:
+      'Sifarisle hazirlanir.Catdirilma ve qurasdirilma pulsuzdur.Olcu:200x300x45',
+    contact: '+994123456789',
     location: 'Bakı',
     comment: 0,
     feedbacks: {
@@ -106,6 +109,8 @@ const productData = [
     title: 'Domofon',
     cost: 200,
     rating: 3,
+    article: 'test',
+    contact: '994123456789',
     location: 'Bakı',
     comment: 1,
     feedbacks: {
@@ -121,6 +126,8 @@ const productData = [
     title: 'Domofon',
     cost: 200,
     rating: 1,
+    article: 'test2',
+    contact: 'contact1',
     location: 'Bakı',
     comment: 1,
     feedbacks: {
@@ -136,6 +143,8 @@ const productData = [
     title: 'Mebel',
     cost: 140,
     rating: 5,
+    article: 'test3',
+    contact: 'contact2',
     location: 'Quba',
     comment: 2,
     feedbacks: {

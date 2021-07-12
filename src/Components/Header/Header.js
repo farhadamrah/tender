@@ -11,6 +11,8 @@ import {
   faCaretSquareLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { Menu, Dropdown, Button, Space } from 'antd';
+
 const Header = () => {
   const [collapsed, setCollapsed] = useState(false);
 
@@ -22,6 +24,26 @@ const Header = () => {
     setCollapsed(false);
   };
 
+  const menu = (
+    <Menu>
+      <Menu.Item>
+        <a rel='noopener noreferrer' href='#'>
+          Az
+        </a>
+      </Menu.Item>
+      <Menu.Item>
+        <a rel='noopener noreferrer' href='#'>
+          En
+        </a>
+      </Menu.Item>
+      <Menu.Item>
+        <a rel='noopener noreferrer' href='#'>
+          Ru
+        </a>
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
     <>
       <header className='main-header'>
@@ -31,24 +53,26 @@ const Header = () => {
 
         <nav className='main-navbar'>
           <ul className='main-navbar__items'>
-            <li className='main-navbar__item'>
+            <li className='main-navbar__items--item'>
               <Link to='/'>
                 <FontAwesomeIcon icon={faHome} />
               </Link>
             </li>
-            <li className='main-navbar__item'>
+            <li className='main-navbar__items--item'>
               <Link to='/login'>
                 <FontAwesomeIcon icon={faSignInAlt} />
               </Link>
             </li>
-            <li className='main-navbar__item'>
+            <li className='main-navbar__items--item'>
               <Link to='/profile'>
                 <FontAwesomeIcon icon={faUserAlt} />
               </Link>
             </li>
-            <li className='main-navbar__item'>
+            <li className='main-navbar__items--item'>
               <Link to='#'>
-                <FontAwesomeIcon icon={faGlobe} />
+                <Dropdown overlay={menu} placement='bottomCenter'>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Dropdown>
               </Link>
             </li>
           </ul>

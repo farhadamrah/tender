@@ -15,16 +15,26 @@
     font-size: 1.5rem;
   }
 
-  .main-navbar__items {
-    list-style: none;
-    display: flex;
+  .main-navbar {
+    margin-right: 1.5rem;
 
-    .main-navbar__item a {
-      text-decoration: none;
-      color: white;
-      // margin: 0 0.8rem;
-      margin-left: 1.5rem;
-      font-size: 1.5rem;
+    &__items {
+      list-style: none;
+      display: flex;
+
+      &--item a {
+        text-decoration: none;
+        color: white;
+        // margin: 0 0.8rem;
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+
+        .fa-globe {
+          position: absolute;
+          top: 0.25rem;
+          margin-left: inherit;
+        }
+      }
     }
   }
 }
