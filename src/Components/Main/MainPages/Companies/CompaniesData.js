@@ -70,6 +70,7 @@ const servicesData = [
 
 const companyData = [
   {
+    id: 1,
     image: unilegal,
     name: 'Unilegal Consulting',
     service: 'Mühasibat xidmətləri',
@@ -80,8 +81,11 @@ const companyData = [
     },
     rating: 932,
     text: `Tikinti, layihələndirmə, yanğınsöndürmə və s. sahələrdə lisenziyaların alınması; *mühasibat işinin təşkili; *kadr işləri; *miqrasiya hüququnun əldə olunması; *korporativ hüquq xidmətləri `,
+    experience: 5,
+    contact: ['+994123456789', '+994987654321'],
   },
   {
+    id: 2,
     image: avantgarde,
     name: 'Automile MMC',
     service: 'Avtomobil icarəsi',
@@ -92,6 +96,8 @@ const companyData = [
     },
     rating: 614,
     text: `AUTOMILE Rent a Car - Bizim xidmətlərimiz - Avtomobil icarəsi sürücü - Avtomobil icarəsi sürücü ilə - Avtobus servis - Transfer servis  `,
+    experience: 5,
+    contact: ['+994123456789', '+994987654321'],
   },
 ];
 
