@@ -36,11 +36,7 @@ const ServiceData = [
     header: 'Şəbəkə qurulmalıdır',
     about:
       'Anbar proqramının işələməsi üçün 3 kompüter arasında şəbəkə qurulmalıdır. Kompüterlərin 2-si Nərimanov rayonunda ofisdədir digəri isə 28 may ərazisində mağazada. Zəhmət olmasa qiymət təkliflərinizi yazın.',
-    images: {
-      img1,
-      img2,
-      img3,
-    },
+    images: [img1, img2, img3],
     feedbacks: {
       green: 0,
       red: 1,
@@ -63,13 +59,9 @@ const ServiceData = [
     id: 3,
     title: 'Buta Grup',
     // image: '',
-    header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edir',
+    header: 'Buta Grup Dizayn hazirlanmasi üçün tender elan edilir',
     about: 'test',
-    images: {
-      img1,
-      img2,
-      img3,
-    },
+    images: [img1, img2, img3],
     feedbacks: {
       green: 0,
       red: 0,

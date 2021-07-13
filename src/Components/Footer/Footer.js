@@ -19,10 +19,10 @@ const Footer = () => {
               <Link to='/'>Saytda reklam</Link>
             </li>
           </ul>
-          <span>info@tender.az</span>
+          <span>info@tenderworld.az</span>
           <span>+994 ** *** ** **</span>
           <span>+994 12 *** ** **</span>
-          <p className='footer__copyrigth'>Copyright © 2021 Tender World </p>
+          <p className='footer__copyrigth'>Copyright © 2021 TenderWorld </p>
         </nav>
       </div>
     </>
